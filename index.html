@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fran.</title>
+<link href='http://fonts.googleapis.com/css?family=Mystery+Quest' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/foundation.css">
+<link rel="stylesheet" href="css/app.css" media="screen">
+</head>
+<body>
+  <header>
+    <div id="offcanvas-full-screen" class="offcanvas-full-screen" data-off-canvas data-transition="overlap">
+      <div class="offcanvas-full-screen-inner">
+        <button class="offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        <ul class="offcanvas-full-screen-menu" id="mainNav">
+          <li><a href="#" id="1" data-close>About</a></li>
+          <li><a href="#" id="2" data-close>Portfolio</a></li>
+          <li><a href="https://www.facebook.com">Resume</a></li>
+          <li><a href="#" id="3" data-close>Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="off-canvas-content" data-off-canvas-content>
+      <div id="headerItems" class="top-bar grid-x align-center">
+        <div id="logoArea" class="top-bar-title small-6 cell">
+          <img id="logo" src="images/logo.svg" alt="Fran.">
+        </div>
+        <div id="hamButton" class="top-bar-right small-3 align-center grid-x">
+          <button class="menu-icon dark" type="button" data-toggle="offcanvas-full-screen"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section id="welcome" class="grid-x">
+    <div id="welcomeMessage" class="speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I am a front end developer. Welcome to my portfolio site!</p></div>
+    <div id="userBubble1" class="speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
+    <div id="myMessage2" class="speech-bubble-left small-8 cell"><p></p></div>
+    <div id="userBubble2" class="speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
+    <input type="text" id="typeInput" placeholder="Type here...">
+      <ul id="response" class="grid-x">
+        <li><a class="answer">
+          <p>This is a question that has lots of words in it wouldnt you agree?</p>
+        </a></li>
+        <li><a class="answer">
+          <p>Question 2 this similar but better</p>
+        </a></li>
+        <li><a class="answer">
+          <p>Fran is coding and she is killing it.</p>
+        </a></li>
+      </ul>
+  </section>
+  <div>
+    <!--class="slideRight"-->
+    <a href="#" data-sticky-container>
+        <div class="sticky slideRight" id="resumeArrow" data-sticky data-options="stickyOn: small">
+          <p>R.</p>
+        </div>
+    </a>
+  </div>
+  <section id="video" class="grid-x small-collapse expanded">
+    <img class="cell" src="images/filler.jpg" alt="Video">
+  </section>
+  <section class="grid-x" id="section1">
+    <h2 class="cell">About Me.</h2>
+    <p class="cell">This is all about me, everything is about me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me</p>
+    <a href="github.com"><img class="small-2 cell socials" src="images/github-logo.png" alt="Github"></a>
+    <a href="linkedin.com"><img class="small-2 cell socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
+    <a href="twitter.com"><img class="small-2 cell socials" src="images/twitter-logo.png" alt="Twiter"></a>
+  </section>
+
+  <section id="section2" class="grid-x">
+    <h2 class="hidden cell">Portfolio</h2>
+    <img class="small-6 cell example"  id="thumb1" src="images/thumbnail.jpg" alt="Portfolio Piece 1">
+    <img class="small-6 cell example" id="thumb2" src="images/thumbnail.jpg" alt="Portfolio Piece 2">
+    <img class="small-6 cell example" id="thumb3" src="images/thumbnail.jpg" alt="Portfolio Piece 3">
+    <img class="small-6 cell example" id="thumb4" src="images/thumbnail.jpg" alt="Portfolio Piece 4">
+  </section>
+  <section class="lightbox">
+		<i class="fa fa-times close-lightbox"></i>
+		<img src="images/p1.3.jpg" alt="WOW look at this lightbox image" class="lightbox-img">
+		<p class="lightbox-desc">Placeholder copy</p>
+	</section>
+  <section id="section3" class="grid-x">
+    <h2 class="cell">Contact</h2>
+    <p class="small-10 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
+    <form class="cell" id="contactInputs">
+			<input class="pinkBG" type="text" required placeholder="Name: (REQUIRED)">
+			<input class="pinkBG" type="email" required placeholder="Email: (REQUIRED)">
+      <input class="pinkBG" type="text" placeholder="Subject: ">
+			<textarea class="pinkBG" rows="12" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
+      <input id="submitButton" type="submit">
+		</form>
+    <a href="github.com"><img class="small-2 cell socials"  src="images/github-logo.png" alt="Github"></a>
+    <a href="linkedin.com"><img class="small-2 cell socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
+    <a href="twitter.com"><img class="small-2 cell socials" src="images/twitter-logo.png" alt="Twiter"></a>
+  </section>
+
+  <footer>
+    <nav class="grid-x" id="footerNav">
+      <ul class="small-10 small-centered cell">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Resume</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="js/main.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/content.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/ScrollToPlugin.min.js"></script>
+</body>
+</html>
