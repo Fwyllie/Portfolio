@@ -16,7 +16,7 @@
 
         if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
           li[i].style.display = "block";
-        }else {
+        }else { 
           li[i].style.display = "none";
        }
    }

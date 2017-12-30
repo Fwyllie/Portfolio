@@ -206,6 +206,35 @@ h2{
   border-radius: 5px;
 }
 
+.bounceRight{
+	animation-name: bounceRight;
+	-webkit-animation-name: bounceRight;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+  animation-delay: 1.4s;
+  -webkit-animation-delay: 1.4s;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+}
+
+@keyframes bounceRight {
+	0% {transform: translateX(-150%);}
+	50%{transform: translateX(8%);}
+	65%{transform: translateX(-4%);}
+	80%{transform: translateX(4%);}
+	95%{transform: translateX(-2%);}
+	100% {transform: translateX(0%);}
+}
+
+@-webkit-keyframes bounceRight {
+	0% {-webkit-transform: translateX(-150%);}
+	50%{-webkit-transform: translateX(8%);}
+  65%{-webkit-transform: translateX(-4%);}
+	80%{-webkit-transform: translateX(4%);}
+	95%{-webkit-transform: translateX(-2%);}
+	100% {-webkit-transform: translateX(0%);}
+}
+
 .speech-bubble-left {
 	position: relative;
 	background: #e5e5e5;
@@ -287,14 +316,20 @@ h2{
 }
 /*RESUME ARROW*/
 
+
 #resumeArrow {
   background-color: #9E797D;
-  /*-webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);*/
+  height: 31.5px;
+  padding: 0px 18px 0px 200px;
+  transform: translateX(-90%);
+  -webkit-transform: translateX(-90%);
 }
 
-#resumeArrow::after{
+#resumeArrow p{
+  color: #ffffff;
+}
+
+#resumeArrow p::after{
   content:"";
   position: absolute;
   top:0;
@@ -309,11 +344,32 @@ h2{
   border-right-color:transparent;
 }
 
-.slideRight{
+#resumeArrow:hover{
+	animation-name: slideRight;
+	-webkit-animation-name: slideRight;
+	animation-duration: 1s;
+	-webkit-animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes slideRight {
+	0% {transform: translateX(-90%);}
+	100% {transform: translateX(-10%);}
+}
+
+@-webkit-keyframes slideRight {
+	0% {-webkit-transform: translateX(-90%);}
+	100% {-webkit-transform: translateX(-10%);}
+}
+
+/*.slideRight{
   margin-bottom: 15px;
-  -webkit-transform: translateX(0%);
-  -ms-transform: translateX(0%);
-  transform: translateX(0%);
+  -webkit-transform: translateX(20%);
+  -ms-transform: translateX(20%);
+  transform: translateX(20%);
 }
 
 .slideRight:hover{
@@ -329,15 +385,25 @@ h2{
 
 @keyframes slideRight {
 	100% {transform: translateX(-20%);}
-}
+}*/
 
 /*ABOUT ME*/
 #section1{
   padding: 10px;
 }
 
+#selfImg{
+  height: auto;
+  height: 250px;
+}
+
 .socials{
-  padding: 5px;
+  max-width: 80%;
+  margin-top: 10px;
+}
+
+.socials:hover{
+  margin-top: 5px;
 }
 
 
@@ -353,6 +419,10 @@ h2{
 
 
 /*LIGHTBOX*/
+
+.thumb { height: 90px; margin: 8px; cursor: pointer; }
+
+
 .lightbox {
 	position:  absolute;
 	display: none;
@@ -363,6 +433,7 @@ h2{
 	background-color: rgba(0,0,0,0.85);
 	z-index: 5000;
 }
+
 
 .lightbox-img{
 	display: block;
@@ -413,12 +484,6 @@ h2{
   -ms-transition: border-radius 1s ease ease-out, background-color 1s ease ease-out;
 }
 
-.socials{
-  margin-top: 10px;
-}
-.socials:hover{
-  margin-top: 5px;
-}
 
 /*FOOTER*/
 

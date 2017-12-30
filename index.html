@@ -39,7 +39,7 @@
     </div>
   </header>
   <section id="welcome" class="grid-x">
-    <div id="welcomeMessage" class="speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I am a front end developer. Welcome to my portfolio site!</p></div>
+    <div id="welcomeMessage" class="bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I am a front end developer. Welcome to my portfolio site!</p></div>
     <div id="userBubble1" class="speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
     <div id="myMessage2" class="speech-bubble-left small-8 cell"><p></p></div>
     <div id="userBubble2" class="speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
@@ -57,15 +57,14 @@
       </ul>
   </section>
   <div>
-    <!--class="slideRight"-->
-    <a href="#" data-sticky-container>
-        <div class="sticky slideRight" id="resumeArrow" data-sticky data-options="stickyOn: small">
+    <a  href="#" data-sticky-container>
+        <div class="sticky" id="resumeArrow" data-sticky data-options="stickyOn: small">
           <p>R.</p>
         </div>
     </a>
   </div>
-  <section id="video" class="grid-x small-collapse expanded">
-    <img class="cell" src="images/filler.jpg" alt="Video">
+  <section class="grid-x small-collapse expanded" id="selfImg">
+    <img class="cell" src="images/about-placeholder.jpg" alt="Video">
   </section>
   <section class="grid-x" id="section1">
     <h2 class="cell">About Me.</h2>
@@ -77,15 +76,16 @@
 
   <section id="section2" class="grid-x">
     <h2 class="hidden cell">Portfolio</h2>
-    <img class="small-6 cell example"  id="thumb1" src="images/thumbnail.jpg" alt="Portfolio Piece 1">
-    <img class="small-6 cell example" id="thumb2" src="images/thumbnail.jpg" alt="Portfolio Piece 2">
-    <img class="small-6 cell example" id="thumb3" src="images/thumbnail.jpg" alt="Portfolio Piece 3">
-    <img class="small-6 cell example" id="thumb4" src="images/thumbnail.jpg" alt="Portfolio Piece 4">
+    <img class="small-6 cell example"  id="p1" src="images/thumbnail.jpg" alt="Portfolio Piece 1">
+    <img class="small-6 cell example" id="p2" src="images/thumbnail.jpg" alt="Portfolio Piece 2">
+    <img class="small-6 cell example" id="p3" src="images/thumbnail.jpg" alt="Portfolio Piece 3">
+    <img class="small-6 cell example" id="p4" src="images/thumbnail.jpg" alt="Portfolio Piece 4">
   </section>
   <section class="lightbox">
 		<i class="fa fa-times close-lightbox"></i>
-		<img src="images/p1.3.jpg" alt="WOW look at this lightbox image" class="lightbox-img">
+		<img src="images/filler.jpg" alt="WOW look at this lightbox image" class="lightbox-img">
 		<p class="lightbox-desc">Placeholder copy</p>
+    <ul class="subImagesContainer"></ul>
 	</section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
@@ -117,9 +117,9 @@
 <script src="js/vendor/what-input.js"></script>
 <script src="js/vendor/foundation.js"></script>
 <script src="js/app.js"></script>
-<script src="js/main.js"></script>
+<script src="js/lightbox.js"></script>
 <script src="js/chat.js"></script>
-<script src="js/content.js"></script>
+<script src="js/LBcontent.js"></script>
 <script src="js/TweenMax.min.js"></script>
 <script src="js/ScrollToPlugin.min.js"></script>
 </body>
