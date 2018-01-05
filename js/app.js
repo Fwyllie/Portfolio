@@ -1,5 +1,5 @@
 $(document).foundation()
-var nav = document.querySelector("#mainNav");
+	var nav = document.querySelector("#mainNav");
 	var links = nav.querySelectorAll("li");
 	//console.log(links);
 
@@ -14,3 +14,19 @@ var nav = document.querySelector("#mainNav");
 	for(var i=0; i<links.length; i++){
 		links[i].addEventListener("click", scrollit, false);
 	}
+
+var arrow = document.querySelector("#resumeArrow");
+var text =  arrow.querySelector("p");
+
+function textAdd(){
+	text.innerHTML = "Resume.";
+	arrow.classList.add("resumeOn");
+	arrow.addEventListener("mouseout", textRemove, false);
+}
+
+function textRemove(){
+	text.innerHTML = "R.";
+	arrow.classList.remove("resumeOn");
+}
+
+arrow.addEventListener("mouseover", textAdd, false);

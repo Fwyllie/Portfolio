@@ -39,20 +39,25 @@
     </div>
   </header>
   <section id="welcome" class="grid-x">
-    <div id="welcomeMessage" class="bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I am a front end developer. Welcome to my portfolio site!</p></div>
-    <div id="userBubble1" class="speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
-    <div id="myMessage2" class="speech-bubble-left small-8 cell"><p></p></div>
-    <div id="userBubble2" class="speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
+    <div id="welcomeMessage" class="chat bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I am a front end developer. Welcome to my portfolio site!</p></div>
+    <div id="helpMessage" class="chat bounceRight2 speech-bubble-left small-8 cell"><p>You can respond using the text box below</p></div>
+    <div id="userBubble1" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
+    <div id="myMessage2" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div>
+    <div id="userBubble2" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
+    <div id="myMessage3" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div>
     <input type="text" id="typeInput" placeholder="Type here...">
       <ul id="response" class="grid-x">
-        <li><a class="answer">
-          <p>This is a question that has lots of words in it wouldnt you agree?</p>
+        <li><a id="user1" class="answer columns">
+          <p><span class="answerP"></span>I want to see your resume.</p>
         </a></li>
-        <li><a class="answer">
-          <p>Question 2 this similar but better</p>
+        <li><a id="user2" class="answer columns">
+          <p><span class="answerP"></span>Tell me more about you.</p>
         </a></li>
-        <li><a class="answer">
-          <p>Fran is coding and she is killing it.</p>
+        <li><a id="user3" class="answer columns">
+          <p><span class="answerP"></span>I want to see sites you have coded in the past.</p>
+        </a></li>
+        <li><a id="user4" class="answer columns">
+          <p><span class="answerP"></span>How can I contact you?</p>
         </a></li>
       </ul>
   </section>
@@ -83,7 +88,7 @@
   </section>
   <section class="lightbox">
 		<i class="fa fa-times close-lightbox"></i>
-		<img src="images/filler.jpg" alt="WOW look at this lightbox image" class="lightbox-img">
+		<img class="lightbox-img" src="images/filler.jpg" alt="WOW look at this lightbox image">
 		<p class="lightbox-desc">Placeholder copy</p>
     <ul class="subImagesContainer"></ul>
 	</section>
@@ -91,11 +96,12 @@
     <h2 class="cell">Contact</h2>
     <p class="small-10 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
     <form class="cell" id="contactInputs">
-			<input class="pinkBG" type="text" required placeholder="Name: (REQUIRED)">
-			<input class="pinkBG" type="email" required placeholder="Email: (REQUIRED)">
-      <input class="pinkBG" type="text" placeholder="Subject: ">
-			<textarea class="pinkBG" rows="12" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
-      <input id="submitButton" type="submit">
+			<input class="pinkBG" name="name" type="text" required placeholder="Name: (REQUIRED)">
+			<input class="pinkBG" name="email" type="email" required placeholder="Email: (REQUIRED)">
+      <input class="street" name="street" type="text" placeholder="Street:">
+      <input class="pinkBG" name="subject" type="text" placeholder="Subject: ">
+			<textarea class="pinkBG" name="message" rows="12" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
+      <input id="submitButton" name="submit" type="submit">
 		</form>
     <a href="github.com"><img class="small-2 cell socials"  src="images/github-logo.png" alt="Github"></a>
     <a href="linkedin.com"><img class="small-2 cell socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
