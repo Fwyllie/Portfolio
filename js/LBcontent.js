@@ -1,20 +1,18 @@
 
 var dynamicContent = {
 		p1: {
-			text : "THIS IF BEAUTIFUL BEAR 1.",
-
-			headline : "Portfolio Piece 1",
+			name : "This is my first example",
 
 			images : [
-				"bear1",
-				"bear2",
-				"bear3"
+				"p1.1",
+				"p1.2",
+				"p1.3"
 			],
 
 			ImageDescription : [
-				"bear 1 is cool",
-				"this is a good bear", 
-				"this is the best bear"
+				"This is desktop",
+				"This is mobile",
+				"This is tablet"
 			]
 		},
 

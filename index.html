@@ -12,6 +12,14 @@
 </head>
 <body>
   <header>
+    <div>
+      <a href="resume.html">
+          <div id="resumeArrow">
+            <p>R.</p>
+          </div>
+      </a>
+    </div>
+
     <div id="offcanvas-full-screen" class="offcanvas-full-screen" data-off-canvas data-transition="overlap">
       <div class="offcanvas-full-screen-inner">
         <button class="offcanvas-full-screen-close" aria-label="Close menu" type="button" data-close>
@@ -21,7 +29,7 @@
         <ul class="offcanvas-full-screen-menu" id="mainNav">
           <li><a href="#" id="1" data-close>About</a></li>
           <li><a href="#" id="2" data-close>Portfolio</a></li>
-          <li><a href="https://www.facebook.com">Resume</a></li>
+          <li><a href="resume.html">Resume</a></li>
           <li><a href="#" id="3" data-close>Contact</a></li>
         </ul>
       </div>
@@ -29,10 +37,10 @@
 
     <div class="off-canvas-content" data-off-canvas-content>
       <div id="headerItems" class="top-bar grid-x align-center">
-        <div id="logoArea" class="top-bar-title small-6 cell">
+        <div id="logoArea" class="top-bar-title small-6 medium-4 large-2 cell">
           <img id="logo" src="images/logo.svg" alt="Fran.">
         </div>
-        <div id="hamButton" class="top-bar-right small-3 align-center grid-x">
+        <div id="hamButton" class="top-bar-right small-3 align-center grid-x" data-hide-for="medium">
           <button class="menu-icon dark" type="button" data-toggle="offcanvas-full-screen"></button>
         </div>
       </div>
@@ -45,72 +53,64 @@
     <div id="myMessage2" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div>
     <div id="userBubble2" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
     <div id="myMessage3" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div>
-    <input type="text" id="typeInput" placeholder="Type here...">
       <ul id="response" class="grid-x">
         <li><a id="user1" class="answer columns">
-          <p><span class="answerP"></span>I want to see your resume.</p>
+          <p>I want to see your resume.</p>
         </a></li>
         <li><a id="user2" class="answer columns">
-          <p><span class="answerP"></span>Tell me more about you.</p>
+          <p>Tell me more about you.</p>
         </a></li>
         <li><a id="user3" class="answer columns">
-          <p><span class="answerP"></span>I want to see sites you have coded in the past.</p>
+          <p>I want to see sites you have coded in the past.</p>
         </a></li>
         <li><a id="user4" class="answer columns">
-          <p><span class="answerP"></span>How can I contact you?</p>
+          <p>How can I contact you?</p>
         </a></li>
       </ul>
+      <input type="text" id="typeInput" placeholder="Type here...">
   </section>
-  <div>
-    <a  href="#" data-sticky-container>
-        <div class="sticky" id="resumeArrow" data-sticky data-options="stickyOn: small">
-          <p>R.</p>
-        </div>
-    </a>
-  </div>
-  <section class="grid-x small-collapse expanded" id="selfImg">
-    <img class="cell" src="images/about-placeholder.jpg" alt="Video">
-  </section>
-  <section class="grid-x" id="section1">
-    <h2 class="cell">About Me.</h2>
-    <p class="cell">This is all about me, everything is about me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me</p>
-    <a href="github.com"><img class="small-2 cell socials" src="images/github-logo.png" alt="Github"></a>
-    <a href="linkedin.com"><img class="small-2 cell socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
-    <a href="twitter.com"><img class="small-2 cell socials" src="images/twitter-logo.png" alt="Twiter"></a>
+
+  <section class="grid-x small-collapse expanded" id="section1">
+    <img id="selfImg" class="small-12 medium-6 cell" src="images/about-placeholder.jpg" alt="Video">
+    <div id="about" class="small-12 medium-6 large-6 cell">
+      <h2 class="cell">About Me.</h2>
+      <p class="cell">This is all about me, everything is about me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me</p>
+      <a href="github.com"><img class="socials" src="images/github-logo.png" alt="Github"></a>
+      <a href="linkedin.com"><img class="socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
+      <a href="twitter.com"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
+    </div>
   </section>
 
   <section id="section2" class="grid-x">
     <h2 class="hidden cell">Portfolio</h2>
-    <img class="small-6 cell example"  id="p1" src="images/thumbnail.jpg" alt="Portfolio Piece 1">
-    <img class="small-6 cell example" id="p2" src="images/thumbnail.jpg" alt="Portfolio Piece 2">
-    <img class="small-6 cell example" id="p3" src="images/thumbnail.jpg" alt="Portfolio Piece 3">
-    <img class="small-6 cell example" id="p4" src="images/thumbnail.jpg" alt="Portfolio Piece 4">
+    <div class="small-12 medium-6 cell imgHolder"><img class="example"  id="p1" src="images/filler.jpg" alt="Portfolio Piece 1"></div>
+    <div class="small-12 medium-6 cell imgHolder"><img class="example" id="p2" src="images/filler.jpg" alt="Portfolio Piece 2"></div>
+    <div class="small-12 medium-6 cell imgHolder"><img class="example" id="p3" src="images/filler.jpg" alt="Portfolio Piece 3"></div>
+    <div class="small-12 medium-6 cell imgHolder"><img class="example" id="p4" src="images/filler.jpg" alt="Portfolio Piece 4"></div>
   </section>
   <section class="lightbox">
 		<i class="fa fa-times close-lightbox"></i>
-		<img class="lightbox-img" src="images/filler.jpg" alt="WOW look at this lightbox image">
+		<img class="lightbox-img" src="" alt="WOW look at this lightbox image">
+    <p class="lightbox-name">Placeholder copy</p>
 		<p class="lightbox-desc">Placeholder copy</p>
     <ul class="subImagesContainer"></ul>
 	</section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
-    <p class="small-10 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
-    <form class="cell" id="contactInputs">
-			<input class="pinkBG" name="name" type="text" required placeholder="Name: (REQUIRED)">
-			<input class="pinkBG" name="email" type="email" required placeholder="Email: (REQUIRED)">
-      <input class="street" name="street" type="text" placeholder="Street:">
-      <input class="pinkBG" name="subject" type="text" placeholder="Subject: ">
-			<textarea class="pinkBG" name="message" rows="12" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
+    <p class="small-10 medium-offset-1 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
+    <form action="contact.php" class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell" id="contactInputs">
+			<input name="name" type="text" required placeholder="Name: (REQUIRED)">
+			<input name="email" type="email" required placeholder="Email: (REQUIRED)">
+      <input name="street" class="street" type="text" placeholder="Street:">
+      <input name="subject" type="text" placeholder="Subject: ">
+			<textarea name="message" rows="8" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
       <input id="submitButton" name="submit" type="submit">
 		</form>
-    <a href="github.com"><img class="small-2 cell socials"  src="images/github-logo.png" alt="Github"></a>
-    <a href="linkedin.com"><img class="small-2 cell socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
-    <a href="twitter.com"><img class="small-2 cell socials" src="images/twitter-logo.png" alt="Twiter"></a>
   </section>
 
   <footer>
     <nav class="grid-x" id="footerNav">
-      <ul class="small-10 small-centered cell">
+      <ul class="small-10 small-offset-1 cell">
         <li><a href="#">About</a></li>
         <li><a href="#">Portfolio</a></li>
         <li><a href="#">Resume</a></li>

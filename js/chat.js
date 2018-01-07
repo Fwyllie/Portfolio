@@ -7,9 +7,9 @@
    var myText3 = document.querySelector('#myMessage3');
    var answer = document.querySelectorAll(".answer");
 
-   input.addEventListener("keyup", myFunction, false);
+   input.addEventListener("keyup", filterText, false);
 
- function myFunction() {
+ function filterText() {
      var filter = input.value.toUpperCase();
      var ul = document.querySelector("#response");
      var li = ul.querySelectorAll('li');
@@ -39,7 +39,6 @@ function populateText(){
   bubble1.innerHTML = this.innerHTML;
   input.value = " ";
   bubble1.id = this.id
-
   var ul = document.querySelector("#response");
   var li = ul.querySelectorAll('li');
   for (i = 0; i < li.length; i++) {

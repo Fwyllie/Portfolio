@@ -38,7 +38,6 @@ h1, h2, h3{
 
 h2{
   color: #303030;
-  margin-top: 5px;
 }
 
 /*HEADER*/
@@ -195,9 +194,10 @@ h2{
 
 #welcome{
   background-color: #ddb0b0;
-  height: 100vh;
   padding: 10px;
   display: block;
+  height: 90vh;
+  position: relative;
 }
 
 .chat{
@@ -324,9 +324,8 @@ h2{
 }
 
 #response{
+  bottom: 40px;
   position: absolute;
-  bottom: 54px;
-  margin: 0;
 }
 
 #response li{
@@ -335,42 +334,27 @@ h2{
   text-decoration: none;
 }
 
-.sendIcon{
-  margin-right: 7px;
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-
 #response li a{
   color: black;
 }
 
 #response li a p{
-  font-size: 0.9em;
-}
-
-#response li:hover{
-  box-shadow: 2px 2px 2px #b8b8b8;
+  font-size: 1em;
 }
 
 #response li a p:hover{
-  color: #4A4A4A;
+  color: #9E797D;
 }
 
 #typeInput{
   position: absolute;
-  bottom: 10px;
-  margin-top: 5px;
+  /*margin-top: 100px;*/
   margin-bottom: 0;
   right: 0;
+  bottom: 10px;
 }
-/*RESUME ARROW*/
 
+/*RESUME ARROW*/
 
 #resumeArrow {
   background-color: #9E797D;
@@ -378,6 +362,10 @@ h2{
   padding: 0px 18px 0px 200px;
   transform: translateX(-90%);
   -webkit-transform: translateX(-90%);
+  position: fixed;
+  z-index: 1000;
+  width: 5%;
+  top: 15px;
 }
 
 #resumeArrow p{
@@ -419,23 +407,42 @@ h2{
 	0% {-webkit-transform: translateX(-90%);}
 	100% {-webkit-transform: translateX(-10%);}
 }
+
+
 .resumeOn{
-  text-align: center;
+  animation-name: textSlideLeft;
+	-webkit-animation-name: textSlideLeft;
+	animation-duration: 0.8s;
+	-webkit-animation-duration: 0.8s;
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes textSlideLeft {
+  0% {transform: translateX(0%);}
+	100% {transform: translateX(-10%);}
+}
+
+@-webkit-keyframes textSlideLeft {
+  0% {-webkit-transform: translateX(0%);}
+	100% {-webkit-transform: translateX(-10%);}
 }
 
 /*ABOUT ME*/
-#section1{
+#about{
   padding: 10px;
 }
 
 #selfImg{
-  height: auto;
-  height: 250px;
+  height: 200px;
 }
 
 .socials{
-  max-width: 80%;
+  width: 15%;
   margin-top: 10px;
+  max-width: 50px;
 }
 
 .socials:hover{
@@ -444,13 +451,33 @@ h2{
 
 
 /*PORTFOLIO*/
+
+.imgHolder{
+  max-height: 200px;
+  overflow: hidden;
+}
 .example{
-  height: 200px;
+  opacity: 0.8;
+}
+
+.example:hover{
+  opacity: 1;
+  animation: zoomIn .7s ease;
+	animation-fill-mode: forwards;
+}
+@keyframes zoomIn {
+  0% {transform: scale(1);}
+	100% {transform: scale(1.2);}
+}
+
+@-webkit-keyframes zoomIn {
+  0% {-webkit-transform: scale(1);}
+	100% {-webkit-transform: scale(1.2);}
 }
 
 #section2{
-  margin-top: 20px;
-  background-color: #DDB0b0;
+  margin-top: 5px;
+  overflow: hidden;
 }
 
 
@@ -471,6 +498,8 @@ h2{
 }
 
 
+
+
 .lightbox-img{
 	display: block;
 	margin: 20px auto;
@@ -489,7 +518,10 @@ h2{
 	margin-top: 12px;
 	font-size: 2em;
 	cursor: pointer;
+  color: #9E797D;
 }
+
+
 
 /*CONTACT FORM*/
 
@@ -501,8 +533,8 @@ h2{
   padding: 10px;
 }
 
-#section3 h2{
-  margin: 10px 0px;
+#section3 p{
+  margin-bottom: 5px;
 }
 
 #submitButton{
@@ -530,12 +562,14 @@ h2{
 
 #footerNav{
   background-color: #9E797D ;
-  margin-top: 20px;
+}
+
+#footerNav ul {
+  margin-bottom: 0;
 }
 
 #footerNav ul li{
   display: inline-block;
-  float: left;
   margin-top: 20px;
 }
 
@@ -564,4 +598,110 @@ h2{
 #footerNav ul li a:hover::after{
   width: 80%;
   background: black;
+}
+
+@media screen and (min-width:25em) {
+  #footerNav ul{
+    margin-left: 50px;
+  }
+}
+
+@media screen and (min-width:28.125em) {
+  #footerNav ul{
+    margin-left: 85px;
+  }
+}
+@media screen and (min-width:37.5em) {
+  #footerNav ul{
+    margin-left: 150px;
+  }
+}
+
+@media screen and (min-width:40em) {/*640px*/
+  #logoArea{
+    margin-left: 30px;
+  }
+  .chat p{
+    font-size: 1.2em;
+  }
+  #myMessage2, #myMessage3{
+    font-size: 1.2em;
+  }
+  #response li a p{
+    font-size: 1.1em;
+  }
+  #selfImg{
+    margin: auto 0;
+  }
+  #section3{
+    text-align: center;
+  }
+  .example{
+    padding: 3px;
+  }
+  #selfImg{
+    padding: 10px;
+  }
+
+}
+
+@media screen and (min-width:43.75em) {/*700px*/
+  #footerNav ul{
+    margin-left: 210px;
+  }
+}
+@media screen and (min-width:53.125em) { /*850px*/
+  #footerNav ul{
+    margin-left: 300px;
+  }
+}
+@media screen and (min-width:62.5em) { /*1000px*/
+  #footerNav ul{
+    margin-left: 385px;
+  }
+}
+
+@media screen and (min-width:64em) { /*1024px*/
+  .chat p{
+    font-size: 1.3em;
+  }
+  #myMessage2, #myMessage3{
+    font-size: 1.3em;
+  }
+  #response li a p{
+    font-size: 1.2em;
+  }
+
+}
+
+@media screen and (min-width:71.875em) {
+  #footerNav ul{
+    margin-left: 420px;
+  }
+}
+@media screen and (min-width:75em) {
+  #footerNav ul{
+    margin-left: 550px;
+  }
+}
+
+
+
+
+
+
+
+
+/********************RESUME***************************/
+
+#resHeader{
+  text-align: center;
+}
+
+#resLogo{
+  margin-top: 20px;
+}
+
+#resPhoneIcon{
+  max-width: 75px;
 }

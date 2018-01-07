@@ -18,15 +18,15 @@ $(document).foundation()
 var arrow = document.querySelector("#resumeArrow");
 var text =  arrow.querySelector("p");
 
-function textAdd(){
-	text.innerHTML = "Resume.";
-	arrow.classList.add("resumeOn");
-	arrow.addEventListener("mouseout", textRemove, false);
-}
+//function textAdd(){
+	//text.innerHTML = "Resume.";
+	//arrow.classList.add("resumeOn");
+	//arrow.addEventListener("mouseout", textRemove, false);
+//}
 
-function textRemove(){
-	text.innerHTML = "R.";
-	arrow.classList.remove("resumeOn");
-}
+//function textRemove(){
+	//text.innerHTML = "R.";
+	//arrow.classList.remove("resumeOn");
+//}
 
-arrow.addEventListener("mouseover", textAdd, false);
+//arrow.addEventListener("mouseover", textAdd, false);
