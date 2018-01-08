@@ -27,12 +27,12 @@
     src: url(../assets/Oxygen.otf);
 }
 
-p, a{
+p, a, h3{
   font-family: lato-light, helvetica, times;
   margin-bottom: 0;
 }
 
-h1, h2, h3{
+h1, h2{
   font-family: oxygen, cursive, ariel;
 }
 
@@ -50,7 +50,7 @@ h2{
   -webkit-transform 0.3s ease-in-out;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  background: #0a0a0a;
+  background: #3b3b3b;
   top: 0;
   left: 0;
   width: 100%;
@@ -164,11 +164,11 @@ h2{
 }
 
 .offcanvas-full-screen-menu a {
-  color: #fefefe;
+  color: #9E7979;
 }
 
 .offcanvas-full-screen-menu a:hover {
-  color: #9E7979;
+  color: #fefefe;
 }
 
 .offcanvas-full-screen-close {
@@ -189,8 +189,26 @@ h2{
   margin-top: 5px;
 }
 
+.offcanvas-full-screen-menu li a::after{
+  content: '';
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.offcanvas-full-screen-menu li a:hover::after{
+  width: 80%;
+  background: black;
+}
 
 /*Intro section*/
+
+.js-off-canvas-overlay.is-visible {
+    z-index: -100;
+}
 
 #welcome{
   background-color: #ddb0b0;
@@ -355,6 +373,14 @@ h2{
 }
 
 /*RESUME ARROW*/
+#resumeArrow p{
+  opacity:1;
+}
+
+#resumeArrow:hover p{
+  opacity:0;
+  transition: opacity 0.8s ease;
+}
 
 #resumeArrow {
   background-color: #9E797D;
@@ -363,13 +389,21 @@ h2{
   transform: translateX(-90%);
   -webkit-transform: translateX(-90%);
   position: fixed;
-  z-index: 1000;
+  z-index: 5;
   width: 5%;
   top: 15px;
 }
 
 #resumeArrow p{
+  color: #fff;
+}
+
+#resumeText{
   color: #ffffff;
+  float: right;
+  margin-right: 5px;
+  font-size: 1em;
+  padding: 5px;
 }
 
 #resumeArrow::after{
@@ -562,30 +596,30 @@ h2{
 
 #footerNav{
   background-color: #9E797D ;
+  text-align: center;
 }
 
 #footerNav ul {
-  margin-bottom: 0;
+  margin-bottom: 10px;
+  margin-left: 0;
 }
 
-#footerNav ul li{
-  display: inline-block;
-  margin-top: 20px;
+#footerNav ul a{
+  margin-left: 15px;
 }
 
-#footerNav ul li a{
-  text-decoration: none;
-  color: #000000;
-  font-size: 1em;
-  margin: 10px 5px;
-  padding-bottom: 5px;
+#footerNav ul a:first-child{
+  margin-left: 0;
 }
 
-#footerNav ul li a:hover{
-  color: #DDB0b0;
-}
 
-#footerNav ul li a::after{
+
+
+
+
+
+
+/*#footerNav ul li a::after{
   content: '';
   display: block;
   margin: auto;
@@ -598,23 +632,17 @@ h2{
 #footerNav ul li a:hover::after{
   width: 80%;
   background: black;
-}
+}*/
 
 @media screen and (min-width:25em) {
-  #footerNav ul{
-    margin-left: 50px;
-  }
+
 }
 
 @media screen and (min-width:28.125em) {
-  #footerNav ul{
-    margin-left: 85px;
-  }
+
 }
 @media screen and (min-width:37.5em) {
-  #footerNav ul{
-    margin-left: 150px;
-  }
+
 }
 
 @media screen and (min-width:40em) {/*640px*/
@@ -646,19 +674,13 @@ h2{
 }
 
 @media screen and (min-width:43.75em) {/*700px*/
-  #footerNav ul{
-    margin-left: 210px;
-  }
+
 }
 @media screen and (min-width:53.125em) { /*850px*/
-  #footerNav ul{
-    margin-left: 300px;
-  }
+
 }
 @media screen and (min-width:62.5em) { /*1000px*/
-  #footerNav ul{
-    margin-left: 385px;
-  }
+
 }
 
 @media screen and (min-width:64em) { /*1024px*/
@@ -675,14 +697,10 @@ h2{
 }
 
 @media screen and (min-width:71.875em) {
-  #footerNav ul{
-    margin-left: 420px;
-  }
+
 }
 @media screen and (min-width:75em) {
-  #footerNav ul{
-    margin-left: 550px;
-  }
+
 }
 
 
