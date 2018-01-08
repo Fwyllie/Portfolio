@@ -1,6 +1,6 @@
 <?php
-/*	$user = 'root';
-	$pass = 'root'; // ON MAC $pass = 'root';
+  $user = 'root';
+	$pass = 'root';
 	$host = 'localhost';
 	$db = "portfolio";
 
@@ -16,7 +16,7 @@
 	}
 	//echo 'connected!';
 	if(isset($_GET['getImages'])){
-		$myQuery = 'SELECT * FROM lightbox';
+		$myQuery = 'SELECT * FROM tbl_images';
 		$results = mysqli_query($conn, $myQuery);
 		$rows = array();
 		while ($row = mysqli_fetch_assoc($results)){
@@ -28,7 +28,7 @@
 	if(isset($_GET["portPiece"])){
 		$portOption = $_GET["portPiece"];
 
-	$myQuery = "SELECT * FROM lightbox WHERE lb_id = '$portOption'"; //select 1 car not 3
+	$myQuery = "SELECT * FROM tbl_images WHERE img_id = '$portOption'"; //select 1 car not 3
 	$result = mysqli_query($conn, $myQuery); // store the result
 	$row =  mysqli_fetch_assoc($result);  // get the row
 	echo json_encode($row);
