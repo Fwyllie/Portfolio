@@ -9,15 +9,16 @@
 
 
 	//echo "From mail.php";
-	function submitMessage($name, $email, $subject, $message, $direct){
+	function submitMessage($name, $email, $subject, $message){
+		//echo "works";
 		$to = "contact@franceswyllie.com";
 		$subj = "Email from portfolio site";
 		$extra = "Reply-to: {$email}";
-		$msg = "Name: ". $name. "\n\nEmail:". $subject. "\n\nSubject:". $email. "\n\nMessage:". $message;
-		//THIS WILL NOT WORK LOCALLY, THIS NEEDS TO BE TESTED ON YOUR HOSTING
+		$msg = "Name:". $name. "\n\nEmail:". $email. "\n\nSubject:". $subject. "\n\nMessage:". $message;
+		return "Thanks {$name}, your message has been sent.";
+		//uncomment the line below to make mail work --- only when hosted
 		//mail($to, $subj, $msg, $extra);
-		$direct = $direct. "?name={$name}";
-		redirect_to($direct);
+
 	}
 
 

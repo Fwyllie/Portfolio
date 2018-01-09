@@ -3,6 +3,7 @@
    display: none;
  }
 
+
  .align-center {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -34,6 +35,10 @@ h1, h2{
 
 h2{
   color: #303030;
+}
+
+h3{
+  font-size: 1em;
 }
 
 /*HEADER*/
@@ -341,8 +346,9 @@ h2{
 }
 
 #response{
-  bottom: 40px;
+  bottom: 45px;
   position: absolute;
+  margin-left: 5px;
 }
 
 #response li{
@@ -363,12 +369,31 @@ h2{
   color: #9E797D;
 }
 
+/*#response li a p::after{
+  content: '';
+  display: block;
+  margin: auto;
+  margin-right: 10px;
+  height: 0px;
+  width: 2px;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+#response li a p:hover::after{
+  width: 30%;
+  background: black;
+}*/
+
 #typeInput{
   position: absolute;
-  /*margin-top: 100px;*/
-  margin-bottom: 0;
+  margin-bottom: 0px;
   right: 0;
-  bottom: 10px;
+  bottom: 20px;
+}
+
+.sendIcon{
+  max-width: 10%;
 }
 
 /*RESUME ARROW*/
@@ -491,6 +516,7 @@ h2{
 }
 .example{
   opacity: 0.8;
+  width: 100%;
 }
 
 .example:hover{
@@ -590,6 +616,11 @@ h2{
   -ms-transition: border-radius .5s ease ease-out, background-color 1s ease ease-out;
 }
 
+#messageSent{
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
 
 /*FOOTER*/
 
@@ -670,6 +701,9 @@ footer{
   #response li a p{
     font-size: 1.2em;
   }
+  #typeInput{
+    right: 5.2em;
+  }
 
 }
 
@@ -677,7 +711,9 @@ footer{
 
 }
 @media screen and (min-width:75em) {
-
+  #typeInput{
+    right: 7em;
+  }
 }
 
 
@@ -688,15 +724,161 @@ footer{
 
 
 /********************RESUME***************************/
+#downloadRes{
+  background-color: #9E797D;
+  opacity: 0.8;
+  height: 31.5px;
+  padding: 0px 20px 0px 80px;
+  position: fixed;
+  z-index: 5;
+  width: 5%;
+  top: 15px;
+}
+
+#downloadRes p{
+  color: #ffffff;
+  float: right;
+  font-size: 1em;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+#downloadRes::after{
+  content:"";
+  position: absolute;
+  top:0;
+  left:100%;
+  height:0;
+  width:0;
+  border-width: 16px;
+  border-style:solid;
+  border-color:#9E797D;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+}
 
 #resHeader{
   text-align: center;
 }
-
-#resLogo{
-  margin-top: 20px;
+#resHeader h2{
+  margin-bottom: 0;
 }
 
-#resPhoneIcon{
-  max-width: 75px;
+#resLogo{
+  margin-top: 50px;
+}
+
+#resInfo{
+  text-align: center;
+}
+
+#circleImg{
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 15px auto;
+}
+
+#resWeb, #resPhone, #resEmail{
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+#resPhoneIcon, #resWebIcon, #resEmailIcon{
+  max-width: 2em;
+}
+
+#introduction, #experience, #skills, #education{
+  padding: 20px;
+}
+#experience div, #education div{
+  margin-top: 10px;
+}
+#experience h3, #education h3{
+  font-size: 1.15em;
+}
+#introduction p, #experience p, #skills p, #education p{
+  font-size: 0.9em;
+}
+.dates{
+  font-size: 0.8em;
+}
+
+#Introduction{
+  border-top: 3px solid #9E7979;
+}
+
+#skills p
+{
+  padding-left: 30px;
+}
+
+.skill{
+  margin-top: 15px;
+}
+
+.skillsCircle{
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #9E7979;
+  margin-top: 16px;
+  margin-right: 10px;
+  float: left;
+}
+
+@media screen and (min-width:40em) {
+  #resLogo{
+    margin-top: 20px;
+  }
+  #resWeb, #resPhone, #resEmail{
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  #circleImg{
+    margin: 5px 0px 5px 36px;
+  }
+  #resPhone p{
+    font-size: 0.85em;
+  }
+  #resEmail{
+    margin-left: 40px;
+  }
+  #Introduction{
+    border-top: 0px solid #fff;
+  }
+  #introduction, #experience{
+    border-right: 3px solid #9E7979;
+  }
+}
+@media screen and (min-width:48em){
+  #circleImg{
+    margin: 5px 0px 5px 55px;
+  }
+}
+@media screen and (min-width:55em){
+  #circleImg{
+    margin: 5px 0px 5px 75px;
+  }
+}
+@media screen and (min-width:64em){
+  #circleImg{
+    margin: 5px 0px 5px 95px;
+  }
+}
+@media screen and (min-width:68.75em){
+  #circleImg{
+    margin: 5px 0px 5px 110px;
+  }
+}
+@media screen and (min-width:75em){
+  #circleImg{
+    margin: 5px 0px 5px 130px;
+  }
+}
+@media screen and (min-width:80em){
+  #circleImg{
+    margin: 5px 0px 5px 165px;
+  }
 }

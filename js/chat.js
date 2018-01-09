@@ -15,7 +15,7 @@
      var li = ul.querySelectorAll('li');
 
      for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
+        li[i].style.display = "block";
 
         var a = li[i].querySelectorAll(".answer")[0];
 

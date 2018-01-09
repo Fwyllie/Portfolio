@@ -7,11 +7,10 @@
 		$street = $_POST['street'];
 		$subject = $_POST['subject'];
 		$message = $_POST['message'];
-		$direct = "thankyou.php";
 		//echo $name;
 		if($street === ""){
 			//echo "Human";
-			$sendMail = submitMessage($name, $email, $subject, $message, $direct);
+			$sendMail = submitMessage($name, $email, $subject, $message);
 		}
 	}
 

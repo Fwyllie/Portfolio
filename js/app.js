@@ -18,6 +18,7 @@ $(document).foundation()
 var arrow = document.querySelector("#resumeArrow");
 var text =  arrow.querySelector("p");
 
+
 //function textAdd(){
 	//text.innerHTML = "Resume.";
 	//arrow.classList.add("resumeOn");

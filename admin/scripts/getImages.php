@@ -1,4 +1,9 @@
 <?php
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+
   include("connect.php");
 
   //$filter = $_GET['filter'];
@@ -9,7 +14,7 @@
     $workQuery = "SELECT * FROM tbl_images WHERE img_id={$id}";
     $getImages = mysqli_query($link, $workQuery);
   }else{
-    $movieQuery = "SELECT img_id, img_link, img_title, img_desc FROM tbl_images WHERE img_primary="yes"";
+    $workQuery = "SELECT img_id, img_link, img_title, img_desc FROM tbl_images WHERE img_primary='yes'"; //load all thumbs
     $getImages = mysqli_query($link, $workQuery);
   }
 
@@ -17,14 +22,10 @@
 
   echo "[";
 
-  while($movResult = mysqli_fetch_assoc($getMovies)){
-    //this loops throught $getMovies
-    //echo $movResult['movies_title'];
-    $jsonResult = json_encode($movResult);
-    //echo $jsonResult;
+  while($imgResult = mysqli_fetch_assoc($getImages)){ ////////////////// //THIS
+    $jsonResult = json_encode($imgResult);
     $grpResult .= $jsonResult. ",";
   }
-
   echo substr($grpResult, 0, -1); //target, remove, how many characters to count back
 
   echo "]";

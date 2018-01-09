@@ -1,3 +1,26 @@
+<?php
+
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+require_once("admin/scripts/config.php");
+if(isset($_POST['submit'])){
+  //echo "YOU DID IT YOU CLICKED THE BUTTON";
+  //echo "works";
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $street = $_POST['street'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+  //echo $name;
+  if($street === ""){
+    //echo "Human";
+    $sendMail = submitMessage($name, $email, $subject, $message);
+  }
+}
+ ?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -54,11 +77,9 @@
     <div id="userBubble2" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
     <div id="myMessage3" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div>
       <ul id="response" class="grid-x">
-        <li>
-          <a id="user1" class="answer columns">
-            <p>I want to see your resume.</p>
-          </a>
-        </li>
+        <li><a id="user1" class="answer columns">
+          <p>I want to see your resume.</p>
+        </a></li>
         <li><a id="user2" class="answer columns">
           <p>Tell me more about you.</p>
         </a></li>
@@ -69,14 +90,14 @@
           <p>How can I contact you?</p>
         </a></li>
       </ul>
-      <input class="large-10 cell" type="text" id="typeInput" placeholder="Type here...">
+      <input type="text" id="typeInput" placeholder="Type here...">
   </section>
 
   <section class="grid-x small-collapse expanded" id="section1">
     <img id="selfImg" class="small-12 medium-6 cell" src="images/about-placeholder.jpg" alt="Video">
     <div id="about" class="small-12 medium-6 large-6 cell">
       <h2 class="cell">About Me.</h2>
-      <p class="cell">Hi, my name is Fran! I'm a professional Front End Developer who loves a good challenge. I'm very proficient in HTML, CSS, Javascript, and am always learning and staying up to date. I always put in an effort towards making every project special with great UI/UX considerations. I have great communication skills and I love meeting new people. </p>
+      <p class="cell">This is all about me, everything is about me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me</p>
       <a href="https://github.com/Fwyllie"><img class="socials" src="images/github-logo.png" alt="Github"></a>
       <a href="https://www.linkedin.com/in/fran-wyllie-1b9943125/"><img class="socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
       <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
@@ -102,14 +123,20 @@
     <h2 class="cell">Contact</h2>
     <p class="small-10 medium-offset-1 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
     <form action="index.php" class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell" id="contactInputs" method="post">
-			<input id="name" name="name" type="text" required placeholder="Name: (REQUIRED)">
+			<input name="name" type="text" required placeholder="Name: (REQUIRED)">
 			<input name="email" type="email" required placeholder="Email: (REQUIRED)">
       <input name="street" class="street" type="text" placeholder="Street:">
-      <input id="submit" name="subject" type="text" placeholder="Subject: ">
+      <input name="subject" type="text" placeholder="Subject: ">
 			<textarea name="message" rows="8" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
       <input id="submitButton" name="submit" type="submit">
 		</form>
+    <h3 id="messageSent"><?php
+    if (!empty($sendMail)) {
+      echo $sendMail;
+    }
+    ?></h3>
   </section>
+
 
   <footer class="grid-x align-center">
       <div class="small-12 medium-6 large-4 cell" id="footerNav">
