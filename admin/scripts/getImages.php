@@ -1,15 +1,7 @@
 <?php
-
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-
   include("connect.php");
 
-  //$filter = $_GET['filter'];
-  //echo $filter;
   if(isset($_GET['id'])){
-    //gets single movie
     $id = $_GET['id'];
     $workQuery = "SELECT * FROM tbl_images WHERE img_id={$id}";
     $getImages = mysqli_query($link, $workQuery);
@@ -22,11 +14,11 @@ error_reporting(E_ALL);
 
   echo "[";
 
-  while($imgResult = mysqli_fetch_assoc($getImages)){ ////////////////// //THIS
+  while($imgResult = mysqli_fetch_assoc($getImages)){
     $jsonResult = json_encode($imgResult);
     $grpResult .= $jsonResult. ",";
   }
-  echo substr($grpResult, 0, -1); //target, remove, how many characters to count back
+  echo substr($grpResult, 0, -1);
 
   echo "]";
 

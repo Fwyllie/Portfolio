@@ -20,7 +20,6 @@ if(isset($_POST['submit'])){
 }
  ?>
 
-
 <!doctype html>
 <html>
 <head>
@@ -70,34 +69,36 @@ if(isset($_POST['submit'])){
     </div>
   </header>
   <section id="welcome" class="grid-x">
-    <div id="welcomeMessage" class="chat bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I am a front end developer. Welcome to my portfolio site!</p></div>
+    <div id="welcomeMessage" class="chat bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I'm a professional Front End Developer. Welcome to my portfolio site!</p></div>
     <div id="helpMessage" class="chat bounceRight2 speech-bubble-left small-8 cell"><p>You can respond using the text box below</p></div>
     <div id="userBubble1" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
-    <div id="myMessage2" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div>
+    <a id="message2link"><div id="myMessage2" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div></a>
     <div id="userBubble2" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
-    <div id="myMessage3" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div>
+    <a id="message3link"><div id="myMessage3" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div></a>
       <ul id="response" class="grid-x">
-        <li><a id="user1" class="answer columns">
-          <p>I want to see your resume.</p>
-        </a></li>
+        <li>
+          <a id="user1" class="answer columns">
+            <p>Let's see your resume!</p>
+          </a>
+        </li>
         <li><a id="user2" class="answer columns">
-          <p>Tell me more about you.</p>
+          <p>Tell me about yourself.</p>
         </a></li>
         <li><a id="user3" class="answer columns">
-          <p>I want to see sites you have coded in the past.</p>
+          <p>Let's see your portfolio.</p>
         </a></li>
         <li><a id="user4" class="answer columns">
           <p>How can I contact you?</p>
         </a></li>
       </ul>
-      <input type="text" id="typeInput" placeholder="Type here...">
+      <input class="large-10 cell" type="text" id="typeInput" placeholder="Type here...">
   </section>
 
   <section class="grid-x small-collapse expanded" id="section1">
-    <img id="selfImg" class="small-12 medium-6 cell" src="images/about-placeholder.jpg" alt="Video">
+    <img id="selfImg" class="align-self small-12 medium-6 large-4 large-offset-4 cell" src="images/headshot-small.jpg" alt="Video" data-interchange="[../images/headshot-circle.png, (medium)], [../images/headshot.jpg, (large)]">
     <div id="about" class="small-12 medium-6 large-6 cell">
       <h2 class="cell">About Me.</h2>
-      <p class="cell">This is all about me, everything is about me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me and me</p>
+      <p class="cell">Hi, my name is Fran! I'm a professional Front End Developer who loves a good challenge. I'm very proficient in HTML, CSS, Javascript, and am always learning and staying up to date. I always put in an effort towards making every project special with great UI/UX considerations. I have great communication skills and I love meeting new people. You can checkout my past work below!</p>
       <a href="https://github.com/Fwyllie"><img class="socials" src="images/github-logo.png" alt="Github"></a>
       <a href="https://www.linkedin.com/in/fran-wyllie-1b9943125/"><img class="socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
       <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
@@ -106,19 +107,14 @@ if(isset($_POST['submit'])){
 
   <section id="section2" class="grid-x">
     <h2 class="hidden cell">Portfolio</h2>
-    <!--<div class="small-12 medium-6 cell imgHolder"><img class="example"  data-dbindex="1" src="images/filler.jpg" alt="Portfolio Piece 1"></div>
-    <div class="small-12 medium-6 cell imgHolder"><img class="example" data-dbindex="2" src="images/filler.jpg" alt="Portfolio Piece 2"></div>
-    <div class="small-12 medium-6 cell imgHolder"><img class="example" data-dbindex="3" src="images/filler.jpg" alt="Portfolio Piece 3"></div>
-    <div class="small-12 medium-6 cell imgHolder"><img class="example" data-dbindex="4" src="images/filler.jpg" alt="Portfolio Piece 4"></div>
-  -->
   </section>
   <section class="lightbox">
-		<i class="fa fa-times close-lightbox"></i>
-		<img class="lightbox-img" src="" alt="WOW look at this lightbox image">
+    <i class="fa fa-times close-lightbox"></i>
+    <img class="lightbox-img" src="" alt="WOW look at this lightbox image">
     <p class="lightbox-name">Placeholder copy</p>
-		<p class="lightbox-desc">Placeholder copy</p>
-    <ul class="subImagesContainer"></ul>
-	</section>
+    <p class="lightbox-desc">Placeholder copy</p>
+    <a class="githubLink">Check it out on GitHub here!</a>
+  </section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
     <p class="small-10 medium-offset-1 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
@@ -130,13 +126,12 @@ if(isset($_POST['submit'])){
 			<textarea name="message" rows="8" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
       <input id="submitButton" name="submit" type="submit">
 		</form>
-    <h3 id="messageSent"><?php
+    <h3 id="messageSent" class="medium-8 medium-offset-2 large-6 large-offset-3 cell"><?php
     if (!empty($sendMail)) {
       echo $sendMail;
     }
     ?></h3>
   </section>
-
 
   <footer class="grid-x align-center">
       <div class="small-12 medium-6 large-4 cell" id="footerNav">

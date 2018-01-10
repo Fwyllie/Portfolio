@@ -6,9 +6,6 @@
 			exit;
 		}
 	}
-
-
-	//echo "From mail.php";
 	function submitMessage($name, $email, $subject, $message){
 		//echo "works";
 		$to = "contact@franceswyllie.com";
@@ -16,10 +13,6 @@
 		$extra = "Reply-to: {$email}";
 		$msg = "Name:". $name. "\n\nEmail:". $email. "\n\nSubject:". $subject. "\n\nMessage:". $message;
 		return "Thanks {$name}, your message has been sent.";
-		//uncomment the line below to make mail work --- only when hosted
-		//mail($to, $subj, $msg, $extra);
-
+		mail($to, $subj, $msg, $extra);
 	}
-
-
 ?>

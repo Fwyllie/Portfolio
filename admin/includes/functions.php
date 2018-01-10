@@ -4,8 +4,7 @@
 	$host = 'localhost';
 	$db = "portfolio";
 
-//TRY connecting to the server
-	$conn = mysqli_connect($host, $user, $pass, $db);
+	$conn = mysqli_connect($host, $user, $pass, $db, 8889);
 
 	mysqli_set_charset($conn, 'utf8');
 
@@ -13,7 +12,7 @@
 		echo 'uh oh it broken';
 		exit;
 	}
-	//echo 'connected!';
+
 	if(isset($_GET['getImages'])){
 		$myQuery = 'SELECT * FROM tbl_images WHERE img_primary = "yes"'; //this gets the thumbnails
 		$results = mysqli_query($conn, $myQuery);
@@ -27,8 +26,9 @@
 	if(isset($_GET["portPiece"])){
 		$portOption = $_GET["portPiece"];
 
-	$myQuery = "SELECT * FROM tbl_images WHERE img_id = '$portOption'"; //this gets the images that go inside of the lightbox
-	$result = mysqli_query($conn, $myQuery);
+	$myQuery = "SELECT * FROM tbl_images WHERE img_projects= '$portOption' AND img_primary = 'no'"; //this gets the images that go inside of the lightbox
+  //SELECT * FROM tbl_images WHERE img_projects = "codeworld"
+  $result = mysqli_query($conn, $myQuery);
 	$row =  mysqli_fetch_assoc($result);
 	echo json_encode($row);
 }
