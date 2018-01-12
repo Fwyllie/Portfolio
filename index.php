@@ -3,22 +3,18 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-require_once("admin/scripts/config.php");
+require_once("includes/scripts/config.php");
 if(isset($_POST['submit'])){
-  //echo "YOU DID IT YOU CLICKED THE BUTTON";
-  //echo "works";
   $name = $_POST['name'];
   $email = $_POST['email'];
   $street = $_POST['street'];
   $subject = $_POST['subject'];
   $message = $_POST['message'];
-  //echo $name;
   if($street === ""){
-    //echo "Human";
     $sendMail = submitMessage($name, $email, $subject, $message);
   }
 }
- ?>
+?>
 
 <!doctype html>
 <html>

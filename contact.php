@@ -1,5 +1,5 @@
 <?php
-	require_once("admin/scripts/config.php");
+	require_once("includes/scripts/config.php");
 	if(isset($_POST['submit'])){
 		$name = $_POST['name'];
 		$email = $_POST['email'];
@@ -10,5 +10,4 @@
 			$sendMail = submitMessage($name, $email, $subject, $message);
 		}
 	}
-
 ?>

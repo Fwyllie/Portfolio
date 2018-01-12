@@ -1,8 +1,7 @@
 (function(){
 	var example = document.querySelectorAll('.example');
-
 	function getThumbs(){
-		const url = './admin/includes/functions.php?getImages=true';
+		const url = '/includes/functions.php?getImages=true';
 
 		fetch(url)//Make AJAX call
 		.then((resp) => resp.json()) //converts result to json
@@ -18,7 +17,6 @@
 				`<div class="small-12 medium-6 large-3 cell imgHolder"><img class="cell example"  id="${thumb.img_projects}" src="./images/${thumb.img_link}" alt="Portfolio Piece"></div>`;
 				thumbHolder.innerHTML += docFrag;
 				let example = document.querySelectorAll('.example');
-
 				example.forEach(function(element, index){
 					element.addEventListener("click", openLB, false);
 				});
@@ -26,7 +24,8 @@
 		}
 
 	function openLB(){
-		const url = './admin/includes/functions.php?portPiece=' + this.id;
+		console.log(this.id);
+		const url = '/includes/functions.php?portPiece=' + this.id;
 		fetch(url)
 		.then((resp) => resp.json())
 		.then((data) => {processElements(data); })
@@ -35,6 +34,7 @@
 		});}
 
 	function processElements(data){
+		console.log("LINK ELEMENTS RAN");
 		const {img_link, img_title, img_desc, img_gitHub} = data;
 		var lightbox = document.querySelector('.lightbox');
 		var lightBoxClose =  document.querySelector('.close-lightbox');
