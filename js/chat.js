@@ -7,15 +7,15 @@
    var myText3 = document.querySelector('#myMessage3');
    var answer = document.querySelectorAll(".answer");
 
-   input.addEventListener("keyup", myFunction, false);
+   input.addEventListener("keyup", filterText, false);
 
- function myFunction() {
+ function filterText() {
      var filter = input.value.toUpperCase();
      var ul = document.querySelector("#response");
      var li = ul.querySelectorAll('li');
 
      for (i = 0; i < li.length; i++) {
-        li[i].style.display = "none";
+        li[i].style.display = "block";
 
         var a = li[i].querySelectorAll(".answer")[0];
 
@@ -39,7 +39,6 @@ function populateText(){
   bubble1.innerHTML = this.innerHTML;
   input.value = " ";
   bubble1.id = this.id
-
   var ul = document.querySelector("#response");
   var li = ul.querySelectorAll('li');
   for (i = 0; i < li.length; i++) {
@@ -49,18 +48,23 @@ function populateText(){
 }
 
 function myResponse(){
+  let link2 = document.querySelector('#message2link');
   if (bubble1.id === "user1") {
     myText2.style.display = "block";
-    myText2.innerHTML = "You can click here to see my resume, or at any time the arrow in the top left will take you there.";
+    link2.href = "resume.html";
+    myText2.innerHTML = "You can click here to see my resume. You can also click the arrow in the top left of the page at any time.";
   }else if (bubble1.id === "user2") {
     myText2.style.display = "block";
-    myText2.innerHTML = "I am the best but click here to read more.";
+    link2.href = "#section1";
+    myText2.innerHTML = "Here is the link! (click here)";
   }else if (bubble1.id === "user3") {
     myText2.style.display = "block";
-    myText2.innerHTML = "You can click here to checkout all my past work";
+    link2.href = "#section2";
+    myText2.innerHTML = "Sure! Click here to check it out.";
   }else if (bubble1.id === "user4") {
     myText2.style.display = "block";
-    myText2.innerHTML = "Click here to send me an email";
+    link2.href = "#section3";
+    myText2.innerHTML = "Click here to shoot me an email.";
   }
 
   answer.forEach(function(element){
@@ -80,20 +84,24 @@ function userResponse2(){
   myResponse2()
 }
 
-
 function myResponse2(){
+  let link3 = document.querySelector('#message3link');
   if (bubble2.id === "user1") {
     myText3.style.display = "block";
-    myText3.innerHTML = "You can click here to see my resume, or at any time the arrow in the top left will take you there.";
+    link3.href = "resume.html";
+    myText3.innerHTML = "You can click here to see my resume. You can also click the arrow in the top left of the page at any time.";
   }else if (bubble2.id === "user2") {
     myText3.style.display = "block";
-    myText3.innerHTML = "I am the best but click here to read more.";
+    link3.href = "#section1";
+    myText3.innerHTML = "Here is the link! (click here)";
   }else if (bubble2.id === "user3") {
     myText3.style.display = "block";
-    myText3.innerHTML = "You can click here to checkout all my past work";
+    link3.href = "#section2";
+    myText3.innerHTML = "Sure! Click here to check it out.";
   }else if (bubble2.id === "user4") {
     myText3.style.display = "block";
-    myText3.innerHTML = "Click here to send me an email";
+    link3.href = "#section3";
+    myText3.innerHTML = "Click here to shoot me an email.";
   }
 }
 

@@ -1,3 +1,19 @@
+<?php
+
+
+require_once("./includes/scripts/config.php");
+if(isset($_POST['submit'])){
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $street = $_POST['street'];
+  $subject = $_POST['subject'];
+  $message = $_POST['message'];
+  if($street === ""){
+    $sendMail = submitMessage($name, $email, $subject, $message);
+  }
+}
+?>
+
 <!doctype html>
 <html>
 <head>
@@ -12,7 +28,7 @@
 </head>
 <body>
   <header>
-    <h2 class="hidden">Header</h2>
+    <h1 class="hidden">Header</h1>
     <div>
       <a href="resume.html">
           <div id="resumeArrow">
@@ -47,7 +63,6 @@
     </div>
   </header>
   <section id="welcome" class="grid-x">
-    <h2 class="hidden">Welcome Message board</h2>
     <div id="welcomeMessage" class="chat bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I'm a professional Front End Developer. Welcome to my portfolio site!</p></div>
     <div id="helpMessage" class="chat bounceRight2 speech-bubble-left small-8 cell"><p>You can respond using the text box below</p></div>
     <div id="userBubble1" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
@@ -88,41 +103,45 @@
     <h2 class="hidden cell">Portfolio</h2>
   </section>
   <section class="lightbox">
-    <h3 class="hidden">Lightbox for portfolio</h3>
-		<i class="fa fa-times close-lightbox"></i>
-		<img class="lightbox-img" src="" alt="WOW look at this lightbox image">
+    <i class="fa fa-times close-lightbox"></i>
+    <img class="lightbox-img" src="" alt="WOW look at this lightbox image">
     <p class="lightbox-name">Placeholder copy</p>
-		<p class="lightbox-desc">Placeholder copy</p>
+    <p class="lightbox-desc">Placeholder copy</p>
     <a class="githubLink">Check it out on GitHub here!</a>
-	</section>
+  </section>
   <section id="section3" class="grid-x">
-    <h2 class="cell">Contact.</h2>
-    <p class="small-10 medium-offset-1 cell">Let's create something awesome together, shoot me an email!</p>
+    <h2 class="cell">Contact</h2>
+    <p class="small-10 medium-offset-1 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
     <form action="index.php" class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell" id="contactInputs" method="post">
-			<input id="name" name="name" type="text" required placeholder="Name: (REQUIRED)">
+			<input name="name" type="text" required placeholder="Name: (REQUIRED)">
 			<input name="email" type="email" required placeholder="Email: (REQUIRED)">
       <input name="street" class="street" type="text" placeholder="Street:">
-      <input id="submit" name="subject" type="text" placeholder="Subject: ">
+      <input name="subject" type="text" placeholder="Subject: ">
 			<textarea name="message" rows="8" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
       <input id="submitButton" name="submit" type="submit">
 		</form>
+    <h3 id="messageSent" class="medium-8 medium-offset-2 large-6 large-offset-3 cell"><?php
+    if (!empty($sendMail)) {
+      echo $sendMail;
+    }
+    ?></h3>
   </section>
 
-    <footer class="grid-x align-center">
-        <div class="small-12 medium-6 large-4 cell" id="footerNav">
-          <a href="https://github.com/Fwyllie"><img class="socials" src="images/github-logo.png" alt="Github"></a>
-          <a href="https://www.linkedin.com/in/fran-wyllie-1b9943125/"><img class="socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
-          <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
-        </div>
-    </footer>
+  <footer class="grid-x align-center">
+      <div class="small-12 medium-6 large-4 cell" id="footerNav">
+        <a href="https://github.com/Fwyllie"><img class="socials" src="images/github-logo.png" alt="Github"></a>
+        <a href="https://www.linkedin.com/in/fran-wyllie-1b9943125/"><img class="socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
+        <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
+      </div>
+  </footer>
 
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/what-input.js"></script>
-  <script src="js/vendor/foundation.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/lightbox.js"></script>
-  <script src="js/chat.js"></script>
-  <script src="js/TweenMax.min.js"></script>
-  <script src="js/ScrollToPlugin.min.js"></script>
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/what-input.js"></script>
+<script src="js/vendor/foundation.js"></script>
+<script src="js/app.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script src="js/ScrollToPlugin.min.js"></script>
 </body>
 </html>
