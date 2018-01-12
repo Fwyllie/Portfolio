@@ -1,9 +1,7 @@
 <?php
 
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
-require_once("includes/scripts/config.php");
+require_once("./includes/scripts/config.php");
 if(isset($_POST['submit'])){
   $name = $_POST['name'];
   $email = $_POST['email'];

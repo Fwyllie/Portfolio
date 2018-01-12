@@ -24,7 +24,6 @@
 		}
 
 	function openLB(){
-		console.log(this.id);
 		const url = '/includes/functions.php?portPiece=' + this.id;
 		fetch(url)
 		.then((resp) => resp.json())
@@ -34,7 +33,6 @@
 		});}
 
 	function processElements(data){
-		console.log("LINK ELEMENTS RAN");
 		const {img_link, img_title, img_desc, img_gitHub} = data;
 		var lightbox = document.querySelector('.lightbox');
 		var lightBoxClose =  document.querySelector('.close-lightbox');
