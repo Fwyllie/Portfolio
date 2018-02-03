@@ -1,6 +1,5 @@
 <?php
 
-
 require_once("./includes/scripts/config.php");
 if(isset($_POST['submit'])){
   $name = $_POST['name'];
@@ -28,7 +27,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
   <header>
-    <h1 class="hidden">Header</h1>
+    <h1 class="hidden">Main Navigation</h1>
     <div>
       <a href="resume.html">
           <div id="resumeArrow">
@@ -62,6 +61,7 @@ if(isset($_POST['submit'])){
       </div>
     </div>
   </header>
+  <div id="chatArea">
   <section id="welcome" class="grid-x">
     <div id="welcomeMessage" class="chat bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I'm a professional Front End Developer. Welcome to my portfolio site!</p></div>
     <div id="helpMessage" class="chat bounceRight2 speech-bubble-left small-8 cell"><p>You can respond using the text box below</p></div>
@@ -87,10 +87,11 @@ if(isset($_POST['submit'])){
       </ul>
       <input class="large-10 cell" type="text" id="typeInput" placeholder="Type here...">
   </section>
+  </div>
 
   <section class="grid-x small-collapse expanded" id="section1">
-    <img id="selfImg" class="align-self small-12 medium-6 large-4 large-offset-4 cell" src="images/headshot-small.jpg" alt="Video" data-interchange="[../images/headshot-circle.png, (medium)], [../images/headshot.jpg, (large)]">
-    <div id="about" class="small-12 medium-6 large-6 cell">
+    <img id="selfImg" class="align-self small-6 medium-4 large-4 large-offset-4 cell" src="images/headshot2.png" alt="Headshot">
+    <div id="about" class="small-12 medium-8 large-8 cell">
       <h2 class="cell">About Me.</h2>
       <p class="cell">Hi, my name is Fran! I'm a professional Front End Developer who loves a good challenge. I'm very proficient in HTML, CSS, Javascript, and am always learning and staying up to date. I always put in an effort towards making every project special with great UI/UX considerations. I have great communication skills and I love meeting new people. You can checkout my past work below!</p>
       <a href="https://github.com/Fwyllie"><img class="socials" src="images/github-logo.png" alt="Github"></a>
@@ -98,16 +99,22 @@ if(isset($_POST['submit'])){
       <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
     </div>
   </section>
+  <section id="skillsArea" class="align-center grid-x">
+    <h2 id="skillsTitle" class="cell">Skills.</h2>
+    <img class="skills cell small-4 medium-3 large-2" src="images/htmlLogo.png" alt="HTML5">
+    <img class="skills cell small-4 medium-3 large-2" src="images/cssLogo.png" alt="CSS3">
+    <img class="skills cell small-4 medium-3 large-2" src="images/jsLogo.png" alt="JavaScript">
+  </section>
 
   <section id="section2" class="grid-x">
     <h2 class="hidden cell">Portfolio</h2>
   </section>
   <section class="lightbox">
     <i class="fa fa-times close-lightbox"></i>
-    <img class="lightbox-img" src="" alt="WOW look at this lightbox image">
+    <img class="lightbox-img" src="placeholder" alt="Image failed to load">
     <p class="lightbox-name">Placeholder copy</p>
     <p class="lightbox-desc">Placeholder copy</p>
-    <a class="githubLink">Check it out on GitHub here!</a>
+    <a class="githubLink"><img src="images/github-logo.png" alt="Check it out on GitHub!"></a>
   </section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
@@ -120,7 +127,8 @@ if(isset($_POST['submit'])){
 			<textarea name="message" rows="8" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
       <input id="submitButton" name="submit" type="submit">
 		</form>
-    <h3 id="messageSent" class="medium-8 medium-offset-2 large-6 large-offset-3 cell"><?php
+    <h3 id="messageSent" class="medium-8 medium-offset-2 large-6 large-offset-3 cell">
+    <?php
     if (!empty($sendMail)) {
       echo $sendMail;
     }

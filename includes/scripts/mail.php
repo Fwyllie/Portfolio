@@ -10,7 +10,8 @@
 		$subj = "Email from portfolio site";
 		$extra = "Reply-to: {$email}";
 		$msg = "Name:". $name. "\n\nEmail:". $email. "\n\nSubject:". $subject. "\n\nMessage:". $message;
-		return "Thanks {$name}, your message has been sent.";
 		mail($to, $subj, $msg, $extra);
+		return "Thanks {$name}, your message has been sent.";
+
 	}
 ?>

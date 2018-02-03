@@ -267,11 +267,15 @@ h3{
     z-index: -100;
 }
 #welcome{
-  background-color: #ddb0b0;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 10px;
   display: block;
   height: 90vh;
   position: relative;
+}
+#chatArea{
+  background-color: #ddb0b0;
 }
 .chat{
   background-color: #e5e5e5;
@@ -419,12 +423,16 @@ h3{
 /*ABOUT ME*/
 #section1{
   overflow: hidden;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 #about{
   padding: 10px;
 }
 #selfImg{
   object-fit:cover;
+  height: 100%;
+  margin: 10px auto;
 }
 .socials{
   width: 15%;
@@ -434,16 +442,27 @@ h3{
 .socials:hover{
   margin-top: 5px;
 }
+#skillsArea{
+  padding: 0px 10px 10px 10px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#skillsArea img{
+  max-width: 130px;
+  height: 100%;
+  padding: 20px;
+}
 
 /*************************PORTFOLIO***********************/
 
 .imgHolder{
-  /*max-height: 255px;*/
   overflow: hidden;
 }
 .example{
   opacity: 0.8;
   width: 100%;
+  margin: 3px 0px;
 }
 .example:hover{
   opacity: 1;
@@ -461,6 +480,9 @@ h3{
 #section2{
   margin-top: 5px;
   overflow: hidden;
+  background-color: #D6D6D6;
+  box-shadow: 0px 0px 3px 2px #D6D6D6;
+  padding: 8px;
 }
 
 /*************************LIGHTBOX**********************/
@@ -510,12 +532,12 @@ h3{
   color: #DDB0B0;
 }
 .githubLink{
-  padding-left: 10px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 10%;
+  max-width: 50px;
 }
-.githubLink:hover{
-  color: #9E797D;
-}
-
 
 
 /*********************CONTACT FORM********************/
@@ -525,6 +547,8 @@ h3{
 }
 #section3 {
   padding: 10px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 #section3 p{
   margin-bottom: 15px;
@@ -586,8 +610,13 @@ footer{
   #response li{
     margin-right: 280px;
   }
+ .skills:first-child{
+    margin-right: 0px;
+  }
+  .skills:last-child{
+     margin-left: 0px;
+   }
 }
-
 @media screen and (min-width:40em) {/*640px*/
   #logoArea{
     margin-left: 30px;
@@ -603,6 +632,10 @@ footer{
   }
   #selfImg{
     margin: auto 0;
+    padding: 30px;
+  }
+  #skillsArea{
+    text-align: center;
   }
   #section3{
     text-align: center;
@@ -610,18 +643,14 @@ footer{
   .example{
     padding: 3px;
   }
-  #selfImg{
-    padding: 10px;
-  }
-
-}
-
-@media screen and (min-width:43.75em) {/*700px*/
 
 }
 @media screen and (min-width:60.625em) { /*850px*/
   #response li{
     margin-right: 480px;
+  }
+  .lightbox-img{
+    width: 60%;
   }
 }
 @media screen and (min-width:64em) { /*1024px*/
@@ -638,9 +667,14 @@ footer{
     margin-left: 90px;
   }
   #typeInput{
-    right: 5.2em;
+    right: 4.5em;
   }
-
+  .skills:first-of-type{
+    margin-right: 50px;
+  }
+  .skills:last-child{
+    margin-left: 50px;
+  }
 }
 
 @media screen and (min-width:71.875em) {
@@ -648,7 +682,7 @@ footer{
 }
 @media screen and (min-width:75em) {
   #typeInput{
-    right: 7em;
+    right: 3em;
   }
 }
 
@@ -687,6 +721,11 @@ footer{
   border-bottom-color:transparent;
   border-right-color:transparent;
 }
+#resumeBody{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 #resHeader{
   text-align: center;
 }
@@ -745,7 +784,7 @@ footer{
   margin-right: 10px;
   float: left;
 }
-#fanshawe {
+.fanshawe {
   font-family: lato-light, helvetica, sans-serif;
   font-size: 1em;
 }
@@ -806,10 +845,5 @@ footer{
 @media screen and (min-width:75em){
   #circleImg{
     margin: 5px 0px 5px 130px;
-  }
-}
-@media screen and (min-width:80em){
-  #circleImg{
-    margin: 5px 0px 5px 165px;
   }
 }

@@ -3,8 +3,8 @@
 	function getThumbs(){
 		const url = '/includes/functions.php?getImages=true';
 
-		fetch(url)//Make AJAX call
-		.then((resp) => resp.json()) //converts result to json
+		fetch(url)
+		.then((resp) => resp.json())
 		.then((data) => {processThumbnails(data); })
 		.catch(function(error) {
 			console.log(error);
