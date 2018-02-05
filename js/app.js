@@ -11,3 +11,20 @@ $(document).foundation()
 	for(var i=0; i<links.length; i++){
 		links[i].addEventListener("click", scrollit, false);
 	}
+
+	///////SKILLS//////
+	var images = document.querySelectorAll(".skills");
+
+	function colourImg(){
+		this.src = "images/" +  this.id + ".png";
+		images.forEach(function(element){
+			element.addEventListener('mouseout', pinkImg, false);
+		});
+	}
+	function pinkImg(){
+		this.src = "images/" +  this.id + "-pink.png";
+	}
+
+	images.forEach(function(element){
+		element.addEventListener('mouseover', colourImg, false);
+	});

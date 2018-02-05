@@ -14,7 +14,7 @@
 			let thumbHolder =  document.querySelector("#section2");
 			data.forEach(thumb => {
 				let docFrag =
-				`<div class="small-12 medium-6 large-3 cell imgHolder"><img class="cell example"  id="${thumb.img_projects}" src="./images/${thumb.img_link}" alt="Portfolio Piece"></div>`;
+				`<div class="small-12 medium-6 large-3 cell imgHolder"><img class="cell example"  id="${thumb.img_projects}" src="./images/${thumb.img_link}" alt="Portfolio Piece"><p class="thumbName">${thumb.img_name}</p><p class="thumbTools">${thumb.img_skill}</p></div>`;
 				thumbHolder.innerHTML += docFrag;
 				let example = document.querySelectorAll('.example');
 				example.forEach(function(element, index){
@@ -42,7 +42,6 @@
 		lightBoxClose.addEventListener('click', closeLB, false);
 
 		lightbox.style.display = "block";
-		window.scrollTo(0,0);
 		document.body.style.overflow = "hidden";
 
 		let img = document.querySelector('.lightbox-img').src = "images/" + img_link;

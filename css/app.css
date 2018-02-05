@@ -423,7 +423,7 @@ h3{
 /*ABOUT ME*/
 #section1{
   overflow: hidden;
-  margin: 0 auto;
+  margin: 30px auto 0px;
   max-width: 1000px;
 }
 #about{
@@ -432,11 +432,11 @@ h3{
 #selfImg{
   object-fit:cover;
   height: 100%;
-  margin: 10px auto;
+  margin: 0px auto 20px;
 }
 .socials{
   width: 15%;
-  margin-top: 10px;
+  margin-top: 20px;
   max-width: 50px;
 }
 .socials:hover{
@@ -458,16 +458,44 @@ h3{
 
 .imgHolder{
   overflow: hidden;
+  padding: 10px;
+  position: relative;
+  text-align: right;
 }
 .example{
-  opacity: 0.8;
   width: 100%;
   margin: 3px 0px;
 }
 .example:hover{
-  opacity: 1;
+  opacity: 0.3;
   animation: zoomIn .7s ease;
 	animation-fill-mode: forwards;
+}
+.thumbName{
+  position: absolute;
+  width: 120px;
+  opacity: 0;
+  top: 0px;
+  left: 50%;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.thumbTools{
+  position: absolute;
+  width: 250px;
+  opacity: 0;
+  bottom: 0px;
+  left: 14%;
+}
+.example:hover ~ .thumbName{
+  top: 5px;
+  opacity: 1;
+  transition: top .5s ease, opacity .5s ease;
+}
+.example:hover ~ .thumbTools{
+  bottom: 5px;
+  opacity: 1;
+  transition: bottom .5s ease, opacity .5s ease;
 }
 @keyframes zoomIn {
   0% {transform: scale(1);}
@@ -478,11 +506,10 @@ h3{
 	100% {-webkit-transform: scale(1.2);}
 }
 #section2{
-  margin-top: 5px;
+  margin-top: 50px;
   overflow: hidden;
-  background-color: #D6D6D6;
-  box-shadow: 0px 0px 3px 2px #D6D6D6;
-  padding: 8px;
+  padding:10px;
+  position: relative;
 }
 
 /*************************LIGHTBOX**********************/
@@ -493,7 +520,7 @@ h3{
   cursor: pointer;
 }
 .lightbox {
-	position:  absolute;
+	position: fixed;
 	display: none;
 	top: 0;
 	left: 0;
@@ -501,7 +528,7 @@ h3{
 	height: 100%;
 	background-color: rgba(255,255,255,0.98);
 	z-index: 5000;
-  padding:20px;
+  padding:10px 20px;
   overflow-x:scroll;
 }
 .lightbox-img{
@@ -522,8 +549,7 @@ h3{
 }
 .close-lightbox{
 	float: right;
-	margin-right: 18px;
-	margin-top: 12px;
+  margin-bottom: 20px;
 	font-size: 2em;
 	cursor: pointer;
   color: #9E797D;
@@ -534,11 +560,35 @@ h3{
 .githubLink{
   position: absolute;
   top: 15px;
-  left: 15px;
-  width: 10%;
+  left: 22px;
+}
+.githubLink img{
+  width: 32px;
   max-width: 50px;
 }
-
+.githubLink p{
+  position: absolute;
+  width: 200px;
+  top: 7px;
+  left: 35px;
+  font-size: .8em;
+  color: black;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  animation: github .8s ease;
+  animation-fill-mode: forwards;
+}
+.githubLink p:hover{
+  color: #9E797D;
+}
+@keyframes github {
+  0% {transform: translateX(-100%);}
+	100% {transform: translateX(0%);}
+}
+@-webkit-keyframes github {
+  0% {transform: translateX(-100%);}
+  100% {transform: translateX(0%);}
+}
 
 /*********************CONTACT FORM********************/
 
@@ -548,7 +598,7 @@ h3{
 #section3 {
   padding: 10px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 50px auto 0px;
 }
 #section3 p{
   margin-bottom: 15px;
@@ -634,16 +684,29 @@ footer{
     margin: auto 0;
     padding: 30px;
   }
-  #skillsArea{
-    text-align: center;
-  }
-  #section3{
+  #skillsArea, #section2, #section3{
     text-align: center;
   }
   .example{
     padding: 3px;
   }
-
+  .githubLink p{
+    width: 300px;
+    top: 4px;
+    left: 0px;
+    font-size: 1em;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width:43.75em){
+  .thumbName{
+    font-size: 1.3em;
+    width: 160px;
+  }
+  .thumbTools{
+    font-size: 1.1em;
+    width: 260px;
+  }
 }
 @media screen and (min-width:60.625em) { /*850px*/
   #response li{
@@ -651,6 +714,13 @@ footer{
   }
   .lightbox-img{
     width: 60%;
+    margin-top: 45px;
+  }
+  .thumbName{
+    width: 200px;
+  }
+  .thumbTools{
+    width: 350px;
   }
 }
 @media screen and (min-width:64em) { /*1024px*/
@@ -675,14 +745,28 @@ footer{
   .skills:last-child{
     margin-left: 50px;
   }
-}
-
-@media screen and (min-width:71.875em) {
-
+  .thumbName{
+    font-size: 1em;
+    width: 120px;
+  }
+  .thumbTools{
+    font-size: 1em;
+    width: 210px;
+  }
 }
 @media screen and (min-width:75em) {
   #typeInput{
     right: 3em;
+  }
+}
+@media screen and (min-width:90em) {
+  .thumbName{
+    font-size: 1.5em;
+    width: 160px;
+  }
+  .thumbTools{
+    font-size: 1.3em;
+    width: 290px;
   }
 }
 

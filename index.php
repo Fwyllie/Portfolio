@@ -90,7 +90,7 @@ if(isset($_POST['submit'])){
   </div>
 
   <section class="grid-x small-collapse expanded" id="section1">
-    <img id="selfImg" class="align-self small-6 medium-4 large-4 large-offset-4 cell" src="images/headshot2.png" alt="Headshot">
+    <img id="selfImg" class="align-self small-6 medium-4 large-4 large-offset-4 cell" src="images/headshot.jpg" alt="Headshot">
     <div id="about" class="small-12 medium-8 large-8 cell">
       <h2 class="cell">About Me.</h2>
       <p class="cell">Hi, my name is Fran! I'm a professional Front End Developer who loves a good challenge. I'm very proficient in HTML, CSS, Javascript, and am always learning and staying up to date. I always put in an effort towards making every project special with great UI/UX considerations. I have great communication skills and I love meeting new people. You can checkout my past work below!</p>
@@ -101,20 +101,23 @@ if(isset($_POST['submit'])){
   </section>
   <section id="skillsArea" class="align-center grid-x">
     <h2 id="skillsTitle" class="cell">Skills.</h2>
-    <img class="skills cell small-4 medium-3 large-2" src="images/htmlLogo.png" alt="HTML5">
-    <img class="skills cell small-4 medium-3 large-2" src="images/cssLogo.png" alt="CSS3">
-    <img class="skills cell small-4 medium-3 large-2" src="images/jsLogo.png" alt="JavaScript">
+    <img id="htmlLogo" class="skills cell small-4 medium-3 large-2" src="images/htmlLogo-pink.png" alt="HTML5">
+    <img id="cssLogo" class="skills cell small-4 medium-3 large-2" src="images/cssLogo-pink.png" alt="CSS3">
+    <img id="jsLogo" class="skills cell small-4 medium-3 large-2" src="images/jsLogo-pink.png" alt="JavaScript">
   </section>
 
   <section id="section2" class="grid-x">
-    <h2 class="hidden cell">Portfolio</h2>
-  </section>
-  <section class="lightbox">
-    <i class="fa fa-times close-lightbox"></i>
-    <img class="lightbox-img" src="placeholder" alt="Image failed to load">
-    <p class="lightbox-name">Placeholder copy</p>
-    <p class="lightbox-desc">Placeholder copy</p>
-    <a class="githubLink"><img src="images/github-logo.png" alt="Check it out on GitHub!"></a>
+    <h2 class="cell">Portfolio.</h2>
+    <section class="lightbox">
+      <i class="fa fa-times close-lightbox"></i>
+      <img class="lightbox-img" src="" alt="Image failed to load">
+      <p class="lightbox-name">Placeholder copy</p>
+      <p class="lightbox-desc">Placeholder copy</p>
+      <a class="githubLink">
+        <img src="images/github-logo.png" alt="GitHub!">
+        <p>Check it out on GitHub here!</p>
+      </a>
+    </section>
   </section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
