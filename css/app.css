@@ -818,6 +818,19 @@ footer{
     font-size: 1em;
     font-weight: bold;
   }
+<<<<<<< HEAD
+=======
+}
+@media screen and (min-width:43.75em){
+  .thumbName{
+    font-size: 1.3em;
+    width: 160px;
+  }
+  .thumbTools{
+    font-size: 1.1em;
+    width: 260px;
+  }
+>>>>>>> ff914c11b8566a842da2fff48d413a58af585f82
 }
 @media screen and (min-width:43.75em){/*700*/
   .thumbName{

@@ -2,7 +2,11 @@
 $user = "franwyll_fron";
 $pass = "rhon1234";
 $url = "localhost";
+<<<<<<< HEAD
 $db = "franwyll_portfolio";
+=======
+$db = "";
+>>>>>>> ff914c11b8566a842da2fff48d413a58af585f82
 $conn = mysqli_connect($url, $user, $pass, $db, "8889");
 
 
