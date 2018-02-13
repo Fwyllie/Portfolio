@@ -103,7 +103,6 @@ if(isset($_POST['submit'])){
   </section>
   <section id="skillsArea" class="align-center">
     <h2 id="skillsTitle" class="cell">Skills.</h2>
-<<<<<<< HEAD
     <div class="align-center grid-x">
       <img id="htmlLogo" class="mainSkills cell small-4 medium-3 large-2" src="images/htmlLogo-pink.png" alt="HTML5">
       <img id="cssLogo" class="mainSkills cell small-4 medium-3 large-2" src="images/cssLogo-pink.png" alt="CSS3">
@@ -115,37 +114,21 @@ if(isset($_POST['submit'])){
       <img class="secondSkills small-3 cell" src="images/nodeLogo.png" alt="Node JS">
       <img class="secondSkills small-3 cell" src="images/phpLogo.png" alt="PHP">
     </div>
-=======
-    <img id="htmlLogo" class="skills cell small-4 medium-3 large-2" src="images/htmlLogo-pink.png" alt="HTML5">
-    <img id="cssLogo" class="skills cell small-4 medium-3 large-2" src="images/cssLogo-pink.png" alt="CSS3">
-    <img id="jsLogo" class="skills cell small-4 medium-3 large-2" src="images/jsLogo-pink.png" alt="JavaScript">
->>>>>>> ff914c11b8566a842da2fff48d413a58af585f82
   </section>
 
   <section id="section2" class="grid-x">
     <h2 class="cell">Portfolio.</h2>
     <section class="lightbox">
-<<<<<<< HEAD
       <h3 class="hidden">Lightbox for portfolio</h3>
   		<i class="fa fa-times close-lightbox"></i>
   		<img class="lightbox-img cell large-8" src="" alt="Image failed to load.">
       <p class="lightbox-name">Placeholder</p>
   		<p class="lightbox-desc">Placeholder</p>
-=======
-      <i class="fa fa-times close-lightbox"></i>
-      <img class="lightbox-img" src="" alt="Image failed to load">
-      <p class="lightbox-name">Placeholder copy</p>
-      <p class="lightbox-desc">Placeholder copy</p>
->>>>>>> ff914c11b8566a842da2fff48d413a58af585f82
       <a class="githubLink">
         <img src="images/github-logo.png" alt="GitHub!">
         <p>Check it out on GitHub here!</p>
       </a>
-<<<<<<< HEAD
   	</section>
-=======
-    </section>
->>>>>>> ff914c11b8566a842da2fff48d413a58af585f82
   </section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
