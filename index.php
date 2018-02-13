@@ -134,11 +134,11 @@ if(isset($_POST['submit'])){
     <h2 class="cell">Contact</h2>
     <p class="small-10 medium-offset-1 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
     <form action="index.php" class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell" id="contactInputs" method="post">
-			<input name="name" type="text" required placeholder="Name: (REQUIRED)">
-			<input name="email" type="email" required placeholder="Email: (REQUIRED)">
+			<input name="name" type="text" required placeholder="Name:">
+			<input name="email" type="email" required placeholder="Email:">
       <input name="street" class="street" type="text" placeholder="Street:">
       <input name="subject" type="text" placeholder="Subject: ">
-			<textarea name="message" rows="8" cols="50" required placeholder="Your Message: (REQUIRED)"></textarea>
+			<textarea name="message" rows="8" cols="50" required placeholder="Your Message:"></textarea>
       <input id="submitButton" name="submit" type="submit">
 		</form>
     <h3 id="messageSent" class="medium-8 medium-offset-2 large-6 large-offset-3 cell">
