@@ -27,9 +27,9 @@ if(isset($_POST['submit'])){
 </head>
 <body>
   <header>
-    <h1 class="hidden">Main Navigation</h1>
+    <h2 class="hidden">Main Navigation</h2>
     <div>
-      <a href="resume.html">
+      <a download href="includes/FrancesWyllieResume.pdf">
           <div id="resumeArrow">
             <h3 id="resumeText">Resume.</h3>
             <p id="r">R.</p>
@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
         <ul class="offcanvas-full-screen-menu" id="mainNav">
           <li><a href="#" id="1" data-close>About</a></li>
           <li><a href="#" id="2" data-close>Portfolio</a></li>
-          <li><a href="resume.html">Resume</a></li>
+          <li class="resumeNav"><a download href="includes/FrancesWyllieResume.pdf">Resume</a></li>
           <li><a href="#" id="3" data-close>Contact</a></li>
         </ul>
       </div>
@@ -63,7 +63,8 @@ if(isset($_POST['submit'])){
   </header>
   <div id="chatArea">
   <section id="welcome" class="grid-x">
-    <div id="welcomeMessage" class="chat bounceRight speech-bubble-left small-8 cell"><p>Hi, my name is Fran. I'm a professional Front End Developer. Welcome to my portfolio site!</p></div>
+    <h2 class="hidden">Welcome Message board</h2>
+    <div id="welcomeMessage" class="chat bounceRight speech-bubble-left small-8 cell"><p>Thanks for checking out my portfolio site! What did you want to see?</p></div>
     <div id="helpMessage" class="chat bounceRight2 speech-bubble-left small-8 cell"><p>You can respond using the text box below</p></div>
     <div id="userBubble1" class="chat speech-bubble-right small-8 small-offset-4 cell"><p></p></div>
     <a id="message2link"><div id="myMessage2" class="chat speech-bubble-left bounceRight small-8 cell"><p></p></div></a>
@@ -85,12 +86,13 @@ if(isset($_POST['submit'])){
           <p>How can I contact you?</p>
         </a></li>
       </ul>
-      <input class="large-10 cell" type="text" id="typeInput" placeholder="Type here...">
+      <p class="text"></p>
+      <input class="large-10 cell" type="text" id="typeInput">
   </section>
   </div>
 
   <section class="grid-x small-collapse expanded" id="section1">
-    <img id="selfImg" class="align-self small-6 medium-4 large-4 large-offset-4 cell" src="images/headshot2.png" alt="Headshot">
+    <img id="selfImg" class="align-self small-6 medium-4 large-4 large-offset-4 cell" src="images/headshot.jpg" alt="Headshot">
     <div id="about" class="small-12 medium-8 large-8 cell">
       <h2 class="cell">About Me.</h2>
       <p class="cell">Hi, my name is Fran! I'm a professional Front End Developer who loves a good challenge. I'm very proficient in HTML, CSS, Javascript, and am always learning and staying up to date. I always put in an effort towards making every project special with great UI/UX considerations. I have great communication skills and I love meeting new people. You can checkout my past work below!</p>
@@ -99,22 +101,34 @@ if(isset($_POST['submit'])){
       <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
     </div>
   </section>
-  <section id="skillsArea" class="align-center grid-x">
+  <section id="skillsArea" class="align-center">
     <h2 id="skillsTitle" class="cell">Skills.</h2>
-    <img class="skills cell small-4 medium-3 large-2" src="images/htmlLogo.png" alt="HTML5">
-    <img class="skills cell small-4 medium-3 large-2" src="images/cssLogo.png" alt="CSS3">
-    <img class="skills cell small-4 medium-3 large-2" src="images/jsLogo.png" alt="JavaScript">
+    <div class="align-center grid-x">
+      <img id="htmlLogo" class="mainSkills cell small-4 medium-3 large-2" src="images/htmlLogo-pink.png" alt="HTML5">
+      <img id="cssLogo" class="mainSkills cell small-4 medium-3 large-2" src="images/cssLogo-pink.png" alt="CSS3">
+      <img id="jsLogo" class="mainSkills cell small-4 medium-3 large-2" src="images/jsLogo-pink.png" alt="JavaScript">
+    </div>
+    <div class="align-center grid-x">
+      <img class="secondSkills small-3 cell" src="images/sassLogo.png" alt="Sass">
+      <img class="secondSkills small-3 cell" src="images/foundationLogo.png" alt="Foundation">
+      <img class="secondSkills small-3 cell" src="images/nodeLogo.png" alt="Node JS">
+      <img class="secondSkills small-3 cell" src="images/phpLogo.png" alt="PHP">
+    </div>
   </section>
 
   <section id="section2" class="grid-x">
-    <h2 class="hidden cell">Portfolio</h2>
-  </section>
-  <section class="lightbox">
-    <i class="fa fa-times close-lightbox"></i>
-    <img class="lightbox-img" src="placeholder" alt="Image failed to load">
-    <p class="lightbox-name">Placeholder copy</p>
-    <p class="lightbox-desc">Placeholder copy</p>
-    <a class="githubLink"><img src="images/github-logo.png" alt="Check it out on GitHub!"></a>
+    <h2 class="cell">Portfolio.</h2>
+    <section class="lightbox">
+      <h3 class="hidden">Lightbox for portfolio</h3>
+  		<i class="fa fa-times close-lightbox"></i>
+  		<img class="lightbox-img cell large-8" src="" alt="Image failed to load.">
+      <p class="lightbox-name">Placeholder</p>
+  		<p class="lightbox-desc">Placeholder</p>
+      <a class="githubLink">
+        <img src="images/github-logo.png" alt="GitHub!">
+        <p>Check it out on GitHub here!</p>
+      </a>
+  	</section>
   </section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
@@ -134,22 +148,22 @@ if(isset($_POST['submit'])){
     }
     ?></h3>
   </section>
-
   <footer class="grid-x align-center">
-      <div class="small-12 medium-6 large-4 cell" id="footerNav">
-        <a href="https://github.com/Fwyllie"><img class="socials" src="images/github-logo.png" alt="Github"></a>
-        <a href="https://www.linkedin.com/in/fran-wyllie-1b9943125/"><img class="socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
-        <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
-      </div>
+    <div class="small-12 medium-6 large-4 cell" id="footerNav">
+      <a href="https://github.com/Fwyllie"><img class="socials" src="images/github-logo.png" alt="Github"></a>
+      <a href="https://www.linkedin.com/in/fran-wyllie-1b9943125/"><img class="socials" src="images/linkedin-logo.png" alt="LinkedIn"></a>
+      <a href="https://twitter.com/FranWyllie"><img class="socials" src="images/twitter-logo.png" alt="Twiter"></a>
+    </div>
   </footer>
 
-<script src="js/vendor/jquery.js"></script>
-<script src="js/vendor/what-input.js"></script>
-<script src="js/vendor/foundation.js"></script>
-<script src="js/app.js"></script>
-<script src="js/lightbox.js"></script>
-<script src="js/chat.js"></script>
-<script src="js/TweenMax.min.js"></script>
-<script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/type.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
 </body>
 </html>

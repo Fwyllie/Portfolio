@@ -1,61 +1,72 @@
-(function(){
-	var example = document.querySelectorAll('.example');
-	function getThumbs(){
-		const url = '/includes/functions.php?getImages=true';
+(function() {
+  var example = document.querySelectorAll('.example');
 
-		fetch(url)
-		.then((resp) => resp.json())
-		.then((data) => {processThumbnails(data); })
-		.catch(function(error) {
-			console.log(error);
-		});}
+  function getThumbs() {
+    const url = '/includes/functions.php?getImages=true';
 
-		function processThumbnails(data){
-			let thumbHolder =  document.querySelector("#section2");
-			data.forEach(thumb => {
-				let docFrag =
-				`<div class="small-12 medium-6 large-3 cell imgHolder"><img class="cell example"  id="${thumb.img_projects}" src="./images/${thumb.img_link}" alt="Portfolio Piece"></div>`;
-				thumbHolder.innerHTML += docFrag;
-				let example = document.querySelectorAll('.example');
-				example.forEach(function(element, index){
-					element.addEventListener("click", openLB, false);
-				});
-			});
-		}
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((data) => {
+        processThumbnails(data);
+      })
+      .catch(function(error) {
+        console.log(error);
+      })
+  };
+  bvgthumbnails(data) {
+    let thumbHolder = document.querySelector("#section2");
+    data.forEach(thumb => {
+      let docFrag =
+        `<div class="small-12 medium-6 large-3 cell imgHolder"><img class="cell example"  id="${thumb.img_projects}" src="./images/${thumb.img_link}" alt="Portfolio Piece"><p class="thumbName">${thumb.img_name}</p><p class="thumbTools">${thumb.img_skill}</p></div>`;
+      thumbHolder.innerHTML += docFrag;
+      let example = document.querySelectorAll('.example');
 
-	function openLB(){
-		const url = '/includes/functions.php?portPiece=' + this.id;
-		fetch(url)
-		.then((resp) => resp.json())
-		.then((data) => {processElements(data); })
-		.catch(function(error) {
-			console.log(error);
-		});}
+      example.forEach(function(element, index) {
+        element.addEventListener("click", openLB, false);
+      });
+    });
+  };
 
-	function processElements(data){
-		const {img_link, img_title, img_desc, img_gitHub} = data;
-		var lightbox = document.querySelector('.lightbox');
-		var lightBoxClose =  document.querySelector('.close-lightbox');
-		var lightBoxImg = document.querySelector('.lightbox-img');
-		var lightboxDesc = document.querySelector('.lightbox-desc');
+  function openLB() {
+    const url = '/includes/functions.php?portPiece=' + this.id;
+    fetch(url)
+      .then((resp) => resp.json())
+      .then((data) => {
+        processElements(data);
+      })
+      .catch(function(error) {
+        console.log(error);
+      });
+  }
 
-		lightBoxClose.addEventListener('click', closeLB, false);
+  function processElements(data) {
+    const {
+      img_link,
+      img_title,
+      img_desc,
+      img_gitHub
+    } = data;
+    var lightbox = document.querySelector('.lightbox');
+    var lightBoxClose = document.querySelector('.close-lightbox');
+    var lightBoxImg = document.querySelector('.lightbox-img');
+    var lightboxDesc = document.querySelector('.lightbox-desc');
 
-		lightbox.style.display = "block";
-		window.scrollTo(0,0);
-		document.body.style.overflow = "hidden";
+    lightBoxClose.addEventListener('click', closeLB, false);
 
-		let img = document.querySelector('.lightbox-img').src = "images/" + img_link;
-		let name = document.querySelector('.lightbox-name').textContent = img_title;
-		let desc = document.querySelector('.lightbox-desc').textContent = img_desc;
-		let github = document.querySelector('.githubLink').href = img_gitHub;
-	}
+    lightbox.style.display = "block";
+    document.body.style.overflow = "hidden";
 
-	function closeLB(){
-		let lightbox = document.querySelector('.lightbox');
-		lightbox.style.display = "none";
-		document.body.style.overflow = "visible";
-	}
+    let img = document.querySelector('.lightbox-img').src = "images/" + img_link;
+    let name = document.querySelector('.lightbox-name').textContent = img_title;
+    let desc = document.querySelector('.lightbox-desc').textContent = img_desc;
+    let github = document.querySelector('.githubLink').href = img_gitHub;
+  }
 
-	getThumbs();
+  function closeLB() {
+    let lightbox = document.querySelector('.lightbox');
+    lightbox.style.display = "none";
+    document.body.style.overflow = "visible";
+  }
+
+  getThumbs();
 })();

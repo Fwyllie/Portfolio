@@ -1,8 +1,8 @@
 <?php
-   $user = "root";
-   $pass = "root";
-   $url = "localhost";
-   $db = "portfolio";
+  $user = "franwyll_fron";
+  $pass = "rhon1234";
+  $url = "localhost";
+  $db = "franwyll_portfolio";
    $link = mysqli_connect($url, $user, $pass, $db, "8889");
 
 

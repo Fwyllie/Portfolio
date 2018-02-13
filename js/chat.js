@@ -51,7 +51,7 @@ function myResponse(){
   let link2 = document.querySelector('#message2link');
   if (bubble1.id === "user1") {
     myText2.style.display = "block";
-    link2.href = "resume.html";
+    link2.href = "includes/FrancesWyllieResume.pdf";
     myText2.innerHTML = "You can click here to see my resume. You can also click the arrow in the top left of the page at any time.";
   }else if (bubble1.id === "user2") {
     myText2.style.display = "block";
@@ -88,7 +88,7 @@ function myResponse2(){
   let link3 = document.querySelector('#message3link');
   if (bubble2.id === "user1") {
     myText3.style.display = "block";
-    link3.href = "resume.html";
+    link3.href = "includes/FrancesWyllieResume.pdf";
     myText3.innerHTML = "You can click here to see my resume. You can also click the arrow in the top left of the page at any time.";
   }else if (bubble2.id === "user2") {
     myText3.style.display = "block";
