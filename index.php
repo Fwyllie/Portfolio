@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fran.</title>
+<link rel="icon" href="images/favicon.png">
 <link href='http://fonts.googleapis.com/css?family=Mystery+Quest' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/foundation.css">
@@ -132,7 +133,7 @@ if(isset($_POST['submit'])){
   </section>
   <section id="section3" class="grid-x">
     <h2 class="cell">Contact</h2>
-    <p class="small-10 medium-offset-1 cell">im the best so you should contact me and give me all of your money. okay thanks bye</p>
+    <p class="small-10 medium-offset-1 cell">Let's create something awesome together, shoot me an email!</p>
     <form action="index.php" class="small-12 medium-10 medium-offset-1 large-8 large-offset-2 cell" id="contactInputs" method="post">
 			<input name="name" type="text" required placeholder="Name:">
 			<input name="email" type="email" required placeholder="Email:">

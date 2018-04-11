@@ -33,7 +33,7 @@
 		});}
 
 	function processElements(data){
-		const {img_link, img_title, img_desc, img_gitHub} = data;
+		const {img_link, img_title, img_desc, img_gitHub, img_liveLink} = data;
 		var lightbox = document.querySelector('.lightbox');
 		var lightBoxClose =  document.querySelector('.close-lightbox');
 		var lightBoxImg = document.querySelector('.lightbox-img');
@@ -48,6 +48,7 @@
 		let name = document.querySelector('.lightbox-name').textContent = img_title;
 		let desc = document.querySelector('.lightbox-desc').textContent = img_desc;
 		let github = document.querySelector('.githubLink').href = img_gitHub;
+		let liveLink = document.querySelector('.liveLink').href = img_liveLink;
 	}
 
 	function closeLB(){
